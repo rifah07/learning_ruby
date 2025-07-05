@@ -23,3 +23,8 @@ Ruby is very object-oriented, which means that absolutely everything in Ruby is 
 ## Numbers
 
 Ruby supports all the typical math operators you would expect.
+There are 2 types of `Numbers` in Ruby. These are  
+- Integers and  
+- Floats (contain decimal points)
+
+### If arithmetic operation with two integers happen in Ruby, the result will always be an integer. To obtain an float answer, just replace one of the integers in the expression with a float. And it is easy to convert integer to float and vice-versa in Ruby (to_i, to_f).
