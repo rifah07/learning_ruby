@@ -1,17 +1,26 @@
-addition = 11+13
-puts "The addition of 11 and 13 is #{addition}"
+num1= 19
+num2= 7
 
-subtraction = 19-17
-puts "The subtraction of 19 and 17 is #{subtraction}"
+addition = num1 + num2
+puts "The addition of #{num1} and #{num2} is #{addition}"
 
-multiplication= 7 * 3
-puts "The multiplication of 7 and 3 is #{multiplication}"
+subtraction = num1 - num2
+puts "The subtraction of #{num1} and #{num2} is #{subtraction}"
 
-division= 24/6
-puts "The division of 24 and 6 is #{division}"
+num3= 15
+num4= 3
 
-exponentiation = 2**3
-puts "The exponentiation of 2 to the power of 3 is #{exponentiation}"
+multiplication= num3 * num4
+puts "The multiplication of #{num3} and #{num4} is #{multiplication}"
 
-modulus = 11 % 2
-puts "The modulus of 11 and 2 is #{modulus}"
+division= num3 / num4
+puts "The division of #{num3} and #{num4} is #{division}"
+
+num5= 11
+num6= 2
+
+exponentiation = num5 ** num6
+puts "The exponentiation of #{num5} to the power of #{num6} is #{exponentiation}"
+
+modulus = num5 % num6
+puts "The modulus of #{num5} and #{num6} is #{modulus}"
