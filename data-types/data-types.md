@@ -33,3 +33,10 @@ There are 2 types of `Numbers` in Ruby. These are
 ## String
 
 Strings can be formed with either double "" or single'' quotation marks, also known as string literals. They are pretty similar, but there are some differences. Specifically, string interpolation and the escape characters, only work inside double quotation marks, not single quotation marks.
+
+---
+
+## Symbol
+
+Strings can be changed, so every time a string is used, Ruby has to store it in memory even if an existing string with the same value already exists. Symbols, on the other hand, are stored in memory only once, making them faster in certain situations. One common application where symbols are preferred over strings are the keys in hashes.  
+To create a symbol, put a colon at the beginning of some text.  
