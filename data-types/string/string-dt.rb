@@ -26,4 +26,6 @@ sentence3= word3.concat(" ",word2, "!")
 puts "Using concat method:"
 puts sentence3
 puts "word3 after concat method: #{word3}"
+puts ""
 
+puts "Note: The << operator".concat(" and concat method modify the original string, ").concat(" while the + operator creates a new string without modifying the original strings.")
