@@ -28,3 +28,8 @@ There are 2 types of `Numbers` in Ruby. These are
 - Floats (contain decimal points)
 
 ### If arithmetic operation with two integers happen in Ruby, the result will always be an integer. To obtain an float answer, just replace one of the integers in the expression with a float. And it is easy to convert integer to float and vice-versa in Ruby (to_i, to_f).
+
+---
+## String
+
+Strings can be formed with either double "" or single'' quotation marks, also known as string literals. They are pretty similar, but there are some differences. Specifically, string interpolation and the escape characters, only work inside double quotation marks, not single quotation marks.
