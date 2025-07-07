@@ -37,3 +37,5 @@ division5= num6 / num4
 puts "The division of 2 integers is always showed an integer in Ruby, it does not show the float part even if that exists: #{division2}"
 puts "To show float part of integer division you can make 1 to float: #{division5}"
 puts "You can convert the integer result to float, but that does not show correct float as the operation held between 2 integers so it did not calculate the float part: #{division2.to_f}"
+
+puts "Similarly (num2/num4).to_f = #{(num2/num4).to_f}"
