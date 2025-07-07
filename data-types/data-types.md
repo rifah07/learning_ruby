@@ -40,3 +40,9 @@ Strings can be formed with either double "" or single'' quotation marks, also kn
 
 Strings can be changed, so every time a string is used, Ruby has to store it in memory even if an existing string with the same value already exists. Symbols, on the other hand, are stored in memory only once, making them faster in certain situations. One common application where symbols are preferred over strings are the keys in hashes.  
 To create a symbol, put a colon at the beginning of some text.  
+
+---
+
+## Boolean
+
+The Boolean values: true represents something that is true, and false represents something that is false. In Ruby, nil represents “nothing”. Everything in Ruby has a return value. When a piece of code doesn’t have anything to return, it will return nil. 
