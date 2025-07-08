@@ -14,3 +14,10 @@ c = a.uniq
 print "a: #{a}\n"
 print "b: #{b}\n"
 print "c: #{c}\n"
+
+d = a.uniq!
+puts "After calling uniq! on a:"
+print "a: #{a}\n"
+print "b: #{b}\n"
+print "c: #{c}\n"
+print "d: #{d}\n"
