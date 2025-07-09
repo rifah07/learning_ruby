@@ -9,6 +9,7 @@ take_block do
 end 
 =end
 
+# The ampersand (&) in the method definition tells us that the argument is a block. 
 
 def take_block(number, &block)
   block.call(number)
