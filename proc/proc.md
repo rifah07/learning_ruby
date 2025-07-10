@@ -14,6 +14,7 @@ A **Proc** (procedure) in Ruby is an object that encapsulates a block of code, w
     - [Method 2: proc method (Kernel#proc)](#method-2-proc-method-kernelproc)
     - [Method 3: lambda (Special type of Proc)](#method-3-lambda-special-type-of-proc)
     - [Method 4: Converting blocks to Procs](#method-4-converting-blocks-to-procs)
+  - [Calling Procs](#calling-procs)
 
 ## What is a Proc?
 
@@ -30,6 +31,8 @@ A Proc is an object that contains a block of code and the context (binding) in w
 - **Closures**: Retain access to variables in their lexical scope
 - **Reusable**: Can be called multiple times
 - **Flexible**: Don't enforce strict argument checking
+
+---
 
 ## Creating Procs
 
@@ -73,4 +76,29 @@ my_lambda = -> x { x ** 2 } # Parentheses optional for single parameter
 
     my_proc = capture_block { |x| x.upcase }  
 
+---
 
+## Calling Procs
+
+There are multiple ways to execute a Proc:
+
+    square = Proc.new { |x| x ** 2 }  
+
+- Method 1: call  
+    result = square.call(5) # => 25  
+
+- Method 2: [] (square brackets)  
+    result = square # => 25  
+
+- Method 3: === (case equality operator)  
+    result = square === 5 # => 25  
+
+- Method 4: . (dot operator) - Ruby 1.9+  
+    result = square.(5) # => 25  
+
+- Method 5: yield (when used with &)  
+    def use_proc(&proc)  
+    yield(5) # Calls the proc with argument 5  
+    end  
+
+---
