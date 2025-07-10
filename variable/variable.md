@@ -90,10 +90,49 @@ You do **not** need to declare the data type. Ruby figures it out for you.
 
 Try these in your Ruby console or file:  
 
- ```bash
     orange = 300  
     apple = 120  
     total = orange + apple  
     puts total # Output: 420
 
 ---
+
+
+## What Does "Mutation" Mean?
+
+**Mutation** means changing the contents of the object that a variable points to, *without* creating a new object. This is different from just changing what the variable points to.
+
+- **Example of mutation (changing the object itself):**
+  
+  ```bash
+    colors = ["red", "green"]
+    colors << "blue" # Now colors is ["red", "green", "blue"]
+
+Here, the `colors` array itself is changed (mutated), and any variable pointing to this array will see the change.
+
+- **Example of reassignment (not mutation):**
+
+  ```bash
+        colors = ["red", "green"]
+        colors = ["yellow", "purple"] # Now colors points to a new array
+
+Here, `colors` now points to a new array, but the original array is unchanged.
+
+## Key Points About Variables
+
+- A variable *stores a reference* to a value or object, not the object itself.
+- If two variables point to the same object, changing (mutating) the object through one variable affects the other.
+- Some objects (like numbers, symbols) can’t be mutated—they are **immutable**.
+
+## Examples
+
+    Assigning a value  
+    score = 10  
+
+    Changing the value  
+    score = 20 # Now score is 20  
+
+    Mutating an array
+    numbers =
+    numbers << 4 # numbers is now
+
