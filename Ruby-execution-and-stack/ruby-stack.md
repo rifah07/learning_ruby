@@ -124,3 +124,40 @@ end
 
 message = greet("Alice")
 ```
+
+**Stack evolution:**
+1. `greet("Alice")` called → Stack: `[<main>, greet]`
+2. `greet` executes and returns → Stack: `[<main>]`
+3. Return value assigned to `message`
+
+### Nested Method Calls
+```ruby
+def outer_method
+  puts "In outer method"
+  inner_method
+  puts "Back in outer method"
+end
+
+def inner_method
+  puts "In inner method"
+  deepest_method
+  puts "Back in inner method"
+end
+
+def deepest_method
+  puts "In deepest method"
+end
+
+outer_method
+```
+
+**Stack progression:**
+```
+1. [<main>]
+2. [<main>, outer_method]
+3. [<main>, outer_method, inner_method]
+4. [<main>, outer_method, inner_method, deepest_method]
+5. [<main>, outer_method, inner_method]  # deepest_method returns
+6. [<main>, outer_method]                # inner_method returns
+7. [<main>]                             # outer_method returns
+```
