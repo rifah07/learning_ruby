@@ -197,3 +197,63 @@ Then it unwinds:
 2. factorial(5) returns 5 * 24 = 120
 1. Result: 120
 ```
+
+## Blocks and the Stack
+
+Blocks create their own context but share the stack frame:
+
+```ruby
+def process_items
+  puts "Processing items"
+  [1, 2, 3].each do |item|
+    puts "Processing item: #{item}"
+    helper_method(item)
+  end
+  puts "Done processing"
+end
+
+def helper_method(item)
+  puts "Helping with #{item}"
+end
+
+process_items
+```
+
+**Stack includes block context:**
+```
+[<main>, process_items, block in process_items, helper_method]
+```
+
+## Exception Handling and Stack Unwinding
+
+When an exception occurs, Ruby unwinds the stack:
+
+```ruby
+def level_one
+  level_two
+end
+
+def level_two
+  level_three
+end
+
+def level_three
+  raise "Something went wrong!"
+end
+
+begin
+  level_one
+rescue => e
+  puts "Caught exception: #{e.message}"
+  puts "Stack trace shows the call chain"
+end
+```
+
+
+**Exception unwinding:**
+1. Exception raised in `level_three`
+2. `level_three` exits (no rescue clause)
+3. `level_two` exits (no rescue clause)
+4. `level_one` exits (no rescue clause)
+5. Exception caught in `begin/rescue` block
+6. Stack trace shows: `level_three` → `level_two` → `level_one` → `<main>`
