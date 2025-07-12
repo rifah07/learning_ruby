@@ -257,3 +257,123 @@ end
 4. `level_one` exits (no rescue clause)
 5. Exception caught in `begin/rescue` block
 6. Stack trace shows: `level_three` → `level_two` → `level_one` → `<main>`
+
+## Stack Overflow
+
+The stack has limited size. Too many nested calls cause stack overflow:
+
+```ruby
+def infinite_recursion
+  infinite_recursion  # This will eventually cause stack overflow
+end
+
+infinite_recursion
+```
+
+**Result:**
+```
+SystemStackError: stack level too deep
+```
+
+## Memory and Performance Implications
+
+### Stack Memory
+- Each stack frame uses memory
+- Deep recursion can exhaust stack space
+- Stack frames are automatically cleaned up when methods return
+
+### Performance Considerations
+- Method calls have overhead (creating/destroying stack frames)
+- Tail call optimization can help in some cases
+- Ruby doesn't optimize tail calls by default
+
+## Examining the Stack at Runtime
+
+### Using `caller` Method
+```ruby
+def show_stack
+  puts "Current call stack:"
+  caller.each_with_index do |frame, index|
+    puts "#{index}: #{frame}"
+  end
+end
+
+def outer
+  inner
+end
+
+def inner
+  show_stack
+end
+
+outer
+```
+
+### Using `caller_locations`
+```ruby
+def detailed_stack_info
+  caller_locations.each do |location|
+    puts "File: #{location.path}"
+    puts "Line: #{location.lineno}"
+    puts "Method: #{location.label}"
+    puts "---"
+  end
+end
+```
+
+## Stack and Variable Scope
+
+The stack determines variable scope:
+
+```ruby
+def outer_method
+  outer_var = "I'm in outer method"
+ 
+  def inner_method
+    # outer_var is not accessible here
+    inner_var = "I'm in inner method"
+    puts inner_var
+  end
+ 
+  inner_method
+  puts outer_var  # This works
+end
+```
+
+## Best Practices for Stack Management
+
+### 1. Avoid Deep Recursion
+```ruby
+# Instead of deep recursion:
+def bad_sum(arr, index = 0)
+  return 0 if index >= arr.length
+  arr[index] + bad_sum(arr, index + 1)
+end
+
+# Use iteration:
+def good_sum(arr)
+  total = 0
+  arr.each { |num| total += num }
+  total
+end
+```
+
+### 2. Use Tail Recursion When Possible
+```ruby
+def tail_factorial(n, acc = 1)
+  return acc if n <= 1
+  tail_factorial(n - 1, n * acc)
+end
+```
+
+### 3. Monitor Stack Depth
+```ruby
+def recursive_method(depth = 0)
+  puts "Current depth: #{depth}"
+  if depth > 100
+    puts "Stack getting deep, stopping"
+    return
+  end
+  recursive_method(depth + 1)
+end
+```
