@@ -161,3 +161,39 @@ outer_method
 6. [<main>, outer_method]                # inner_method returns
 7. [<main>]                             # outer_method returns
 ```
+
+## Recursive Calls and Stack Growth
+
+Recursion creates multiple stack frames for the same method:
+
+```ruby
+def factorial(n)
+  if n <= 1
+    1
+  else
+    n * factorial(n - 1)
+  end
+end
+
+puts factorial(5)
+```
+
+**Stack for factorial(5):**
+```
+1. [<main>]
+2. [<main>, factorial(5)]
+3. [<main>, factorial(5), factorial(4)]
+4. [<main>, factorial(5), factorial(4), factorial(3)]
+5. [<main>, factorial(5), factorial(4), factorial(3), factorial(2)]
+6. [<main>, factorial(5), factorial(4), factorial(3), factorial(2), factorial(1)]
+```
+
+Then it unwinds:
+```
+6. factorial(1) returns 1
+5. factorial(2) returns 2 * 1 = 2
+4. factorial(3) returns 3 * 2 = 6
+3. factorial(4) returns 4 * 6 = 24
+2. factorial(5) returns 5 * 24 = 120
+1. Result: 120
+```
