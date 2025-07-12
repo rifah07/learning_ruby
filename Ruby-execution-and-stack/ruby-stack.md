@@ -377,3 +377,102 @@ def recursive_method(depth = 0)
   recursive_method(depth + 1)
 end
 ```
+
+
+
+## Common Stack-Related Errors
+
+### 1. SystemStackError
+```ruby
+# Infinite recursion
+def endless_loop
+  endless_loop
+end
+```
+
+### 2. LocalJumpError
+```ruby
+# Return outside method
+def problematic_method
+  [1, 2, 3].each do |num|
+    return num if num == 2  # This can cause issues
+  end
+end
+```
+
+### 3. NoMethodError in Stack Context
+```ruby
+def chain_call
+  obj = get_object
+  obj.method_name  # If obj is nil, error occurs here
+end
+```
+
+## Debugging Stack Issues
+
+### 1. Check Stack Depth
+```ruby
+def check_depth
+  puts "Current stack depth: #{caller.length}"
+end
+```
+
+### 2. Log Method Entry/Exit
+```ruby
+def traced_method
+  puts "Entering #{__method__}"
+  result = actual_work
+  puts "Exiting #{__method__}"
+  result
+end
+```
+
+### 3. Use Exception Handling
+```ruby
+def safe_method
+  risky_operation
+rescue StandardError => e
+  puts "Error in #{__method__}: #{e.message}"
+  puts "Stack trace: #{e.backtrace.join("\n")}"
+  raise
+end
+```
+
+## The Stack and Ruby's Object Model
+
+Ruby's object model interacts with the stack:
+
+```ruby
+class MyClass
+  def instance_method
+    puts "Instance method called"
+    puts "Self is: #{self}"
+    class_method
+  end
+ 
+  def self.class_method
+    puts "Class method called"
+    puts "Self is: #{self}"
+  end
+end
+
+obj = MyClass.new
+obj.instance_method
+```
+
+**Stack frames include:**
+- Current `self` object
+- Method lookup chain
+- Constant lookup scope
+
+## Conclusion
+
+Understanding Ruby's execution model and call stack is crucial for:
+- **Debugging** - Stack traces make sense when you understand the stack
+- **Performance** - Knowing the cost of method calls
+- **Design** - Making informed decisions about recursion vs iteration
+- **Memory management** - Understanding when stack frames are created/destroyed
+
+The call stack is the foundation that makes method calls, variable scoping, and exception handling possible. When you understand how Ruby manages the stack, you'll be better equipped to write efficient code and debug issues when they arise.
+
+This knowledge directly prepares you for understanding stack traces, which are simply a snapshot of the call stack at the moment an error occurs.
