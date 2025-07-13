@@ -201,3 +201,58 @@ puts e.backtrace.select { |line| line.include?('app/') }
 # Remove gem paths
 puts e.backtrace.reject { |line| line.include?('gems/') }
 ```
+
+## Tools for Better Stack Traces
+
+### 1. Better Errors Gem
+```ruby
+gem 'better_errors'
+gem 'binding_of_caller'
+```
+
+### 2. Pry for Debugging
+```ruby
+gem 'pry'
+gem 'pry-byebug'
+
+# Add to your code:
+binding.pry
+```
+
+### 3. Ruby's Built-in Caller
+```ruby
+def debug_trace
+  puts caller
+end
+```
+
+## Best Practices
+
+1. **Read the full trace** - Don't just look at the first line
+2. **Focus on your code** - Filter out framework noise
+3. **Use meaningful method names** - Makes traces easier to follow
+4. **Add context to errors** - Include relevant information in error messages
+5. **Use logging** - Add strategic logging to trace execution flow
+
+## Example: Debugging a Real Stack Trace
+
+```ruby
+# Given this stack trace:
+NoMethodError: undefined method `name' for nil:NilClass
+        from app/models/user.rb:15:in `full_name'
+        from app/views/users/show.html.erb:8:in `block in _app_views_users_show_html_erb'
+        from app/controllers/users_controller.rb:12:in `show'
+
+# Debugging steps:
+# 1. Error in User#full_name at line 15
+# 2. Called from users/show.html.erb at line 8
+# 3. Initiated from UsersController#show at line 12
+# 4. Issue: some object is nil when calling .name
+# 5. Check what objects are being used in full_name method
+```
+
+## Conclusion
+
+Stack traces are your debugging roadmap. They tell you not just where something went wrong, but how your program got there. Learning to read them effectively will significantly improve your debugging skills and reduce the time spent hunting down bugs.
+
+Remember: the stack trace is trying to help you - it's showing you the exact path your code took to reach the error. Follow that path, and you'll find your bug.
