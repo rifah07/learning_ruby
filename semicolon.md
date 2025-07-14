@@ -16,3 +16,26 @@ name = "John"; age = 25; puts "Hello #{name}, you are #{age} years old"
 Single statements on separate lines - no semicolon needed  
 name = "John"  
 age = 25  
+
+### Line Endings vs Semicolons
+
+Ruby treats **linefeeds as semicolons**. This means:
+- Semicolons are **not required at the end of lines**
+- A newline character effectively terminates a statement
+- You can omit semicolons when each statement is on its own line
+
+## Specific Use Cases
+
+### Class and Method Definitions
+
+Semicolons are commonly used in **one-line class and method definitions**:
+
+Empty class definition  
+class Dog; end  
+
+Empty method definition  
+def bark; end  
+
+Method with body on same line  
+def greet(name); puts "Hello, #{name}!"; end  
+
