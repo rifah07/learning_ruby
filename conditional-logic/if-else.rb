@@ -14,3 +14,4 @@ end
 puts "Input is One" if input == 1
 puts "Input is Two" if input == 2
 puts "Input is not 1 or 2" if input != 1 && input != 2
+puts "Input is not 1 or 2" unless input == 1 && input == 2 #same as the line before, but using `unless`
