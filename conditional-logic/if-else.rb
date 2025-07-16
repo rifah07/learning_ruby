@@ -1,20 +1,11 @@
-=begin
- if 1 < 2
-  puts "Hot diggity, 1 is less than 2!"
-end
-=end
+puts "Enter a number"
 
-# the above block can be written as a one-liner
-# puts "Hot diggity damn, 1 is less than 2" if 1 < 2
+input= gets.chomp.to_i
 
-
-attack_by_land = false
-attack_by_sea = false
-
-if attack_by_land == true
-  puts "release the goat"
-elsif attack_by_sea == true
-  puts "release the shark"
-else
-  puts "release Kevin the octopus"
+if input == 1
+  puts "Input is One"
+elsif input == 2
+  puts "Input is Two"
+else 
+  puts "Input is not 1 or 2"
 end
