@@ -69,3 +69,19 @@ When operators have the same precedence, **left-to-right associativity** applies
 
 100 / 10 * 10 # => 100 (evaluated as (100 / 10) * 10)  
   
+
+## Examples
+
+Precedence example  
+5 + 3 * 2 # => 11 (not 16)  
+10 - 4 / 2 # => 8 (not 3)  
+
+Boolean precedence  
+x = true && false # x = false  
+y = true and false # y = true (assignment happens first)  
+
+Range and comparison  
+1..5 == 1..5 # => true  
+
+
+*This reference covers Ruby operator precedence as documented in the official Ruby documentation and follows the behavior consistent across Ruby versions 1.8, 1.9, 2.0, and later.*
