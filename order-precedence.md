@@ -35,3 +35,37 @@ The following table lists Ruby operators from **highest precedence** to **lowest
 | 20 | `or`, `and` | Boolean OR, Boolean AND | No |
 | 21 | `modifier-if`, `modifier-unless`, `modifier-while`, `modifier-until` | Conditional and loop modifiers | No |
 | 22 | `{ }` blocks | Block expressions | No |
+
+## Important Notes
+
+### Unary Operators
+- **Unary `+`** and **unary `-`** are for expressions like `+1`, `-1`, or `-(a + b)`
+- These have different precedence than their binary counterparts
+
+### Boolean Operators
+The difference between `&&`/`||` and `and`/`or` is significant due to precedence:
+result = true and false # => true (because = has higher precedence than 'and')  
+result = true && false # => false (because && has higher precedence than =)  
+
+
+### Blocks
+- `{ }` blocks have higher precedence than `do...end` blocks
+- Both have the lowest precedence among all operators
+
+### Method Operators
+Operators marked with **"Yes"** in the Method column are implemented as methods and can be redefined in classes.
+
+## Overriding Precedence
+
+Use **parentheses** to override the default precedence:
+
+10 + 20 * 10 # => 210 (multiplication first)  
+(10 + 20) * 10 # => 300 (addition first due to parentheses)  
+
+
+## Associativity
+
+When operators have the same precedence, **left-to-right associativity** applies for most operators:
+
+100 / 10 * 10 # => 100 (evaluated as (100 / 10) * 10)  
+  
