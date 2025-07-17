@@ -25,3 +25,7 @@ if num1.to_s != num2
 else 
   puts "Numbers are equal when first number #{num1} compared as strings"
 end
+
+# ! - the "not" operator. When you add this in front of a boolean expression it will change that boolean value to its opposite.
+
+puts  !(num1 == num2)
