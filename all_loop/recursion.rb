@@ -2,6 +2,13 @@
 # Recursion is the act of calling a method from within itself.
  # That probably sounds confusing so let's look at some actual code to get a better idea.
 
+# This is without recursion
+=begin
+  def doubler(start)
+    puts start * 2
+  end
+=end
+
 def doubler(start)
   puts start
   if start < 10
