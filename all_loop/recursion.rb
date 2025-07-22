@@ -1,6 +1,6 @@
 # Recursion is another way to create a loop in Ruby.
 # Recursion is the act of calling a method from within itself.
- # That probably sounds confusing so let's look at some actual code to get a better idea.
+ # That probably sounds confusing so let's look at some actual code to get a better idea. -The Launch School
 
 # This is without recursion
 =begin
