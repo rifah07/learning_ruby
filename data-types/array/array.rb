@@ -8,3 +8,9 @@
 # array concatenation: array1 + array2
 # array slicing: array[start_index, length]
 # array comparison: ==, !=, <=> (spaceship operator)
+
+# Create an array
+puts Array.new               #=> []
+puts Array.new(3)            #=> [nil, nil, nil]
+puts Array.new(3, 7)         #=> [7, 7, 7]
+puts Array.new(3, true)      #=> [true, true, true]
