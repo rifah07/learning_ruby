@@ -10,6 +10,7 @@
 # array comparison: ==, !=, <=> (spaceship operator)
 
 # Create an array
+# here used 2 optional arguments (initial size and default value):
 puts Array.new               #=> []
 puts Array.new(3)            #=> [nil, nil, nil]
 puts Array.new(3, 7)         #=> [7, 7, 7]
