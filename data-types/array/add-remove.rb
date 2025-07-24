@@ -28,3 +28,10 @@ num_array.pop
 puts num_array.inspect  #=> [-1, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8]
 num_array.pop(2)
 puts num_array.inspect  #=> [-1, 10, 0, 1, 2, 3, 4, 5, 6]
+
+# remove elements from the beginning of an array
+puts "The second approach to remove elements from an array is using the shift method."
+num_array.shift
+puts num_array.inspect  #=> [-1, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8]
+num_array.shift(2)
+puts num_array.inspect  #=> [0, 1, 2, 3, 4, 5, 6]
