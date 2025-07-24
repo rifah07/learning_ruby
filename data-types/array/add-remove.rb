@@ -10,6 +10,11 @@ puts "The second approach to add elements to an array is using the shovel operat
 puts "This operator is used to append elements to the end of an array."
 puts num_array.inspect  #=> [1, 2, 3, 4, 5, 6, 7, 8]
 
+# using unshift to add elements to the beginning of an array
+puts "The third approach to add elements to an array is using the unshift method."
+num_array.unshift(0)
+puts num_array.inspect  #=> [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
 # remove elements from the end of an array
 puts "The first approach to remove elements from an array is using the pop method."
 num_array.pop
