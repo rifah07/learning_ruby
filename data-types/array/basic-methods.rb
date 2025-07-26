@@ -28,3 +28,5 @@ puts arr.drop(3)               #=> [4, 5, 6]
 
 puts arr.count               #=> 6
 puts arr.count(2)            #=> 1
+
+puts arr.insert(3, 'apple') #=> [1, 2, 3, "apple", 4, 5, 6]
