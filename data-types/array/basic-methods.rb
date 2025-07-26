@@ -15,3 +15,6 @@ puts [1, 2, 3].join("-")     #=> "1-2-3"
 arr = [1,2,3,4,5,6]
 puts arr.at(0)               #=> 1
 puts arr.at(1)               #=> 2
+
+puts arr.first               #=> 1
+puts arr.last
