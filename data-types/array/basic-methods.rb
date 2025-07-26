@@ -18,3 +18,10 @@ puts arr.at(1)               #=> 2
 
 puts arr.first               #=> 1
 puts arr.last
+
+puts arr.fetch(0)               #=> 1
+#puts arr.fetch(10)               #=> IndexError
+puts arr.fetch(10, "oops")  #=> "oops"
+
+puts arr.take(3)               #=> [1, 2, 3]
+puts arr.drop(3)               #=> [4, 5, 6]
