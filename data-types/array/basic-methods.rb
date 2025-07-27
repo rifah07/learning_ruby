@@ -61,3 +61,12 @@ arr_with_nil = [1, nil, 2, nil, 3]
 puts "Array with nil values: #{arr_with_nil}"
 puts "After compacting the array:"
 puts arr_with_nil.compact #=> [1, 2, 3]
+puts arr_with_nil.compact! #=> [1, 2, 3]
+puts "After compacting in-place:"
+puts arr_with_nil #=> [1, 2, 3]
+
+# use uniq method to remove duplicates
+arr_with_duplicates = [1, 2, 2, 3, 4, 4, 5]
+puts "Array with duplicates: #{arr_with_duplicates}"
+puts "After removing duplicates:"
+puts arr_with_duplicates.uniq #=> [1, 2, 3, 4, 5]
