@@ -54,3 +54,10 @@ puts arr                  #=> [1, 2, 3, "orange", "pear", "grapefruit", 4, 5, 6]
 
 puts "Delete elements from the array:"
 puts arr.delete_at(2)     #=> "3"
+puts arr
+
+# A useful method if you need to remove nil values from an array is compact
+arr_with_nil = [1, nil, 2, nil, 3]
+puts "Array with nil values: #{arr_with_nil}"
+puts "After compacting the array:"
+puts arr_with_nil.compact #=> [1, 2, 3]
