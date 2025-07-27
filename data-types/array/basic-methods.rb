@@ -32,3 +32,5 @@ puts arr.count(2)            #=> 1
 puts arr.insert(3, 'apple') #=> [1, 2, 3, "apple", 4, 5, 6]
 arr.insert(3, 'orange', 'pear', 'grapefruit')
 puts arr                  #=> [1, 2, 3, "orange", "pear", "grapefruit", 4, 5, 6]
+
+puts arr.delete_at(2)     #=> "3"
