@@ -21,3 +21,5 @@ puts "Actual array after delete_if: #{arr}" #=> [4, 5, 6]
 puts "Using keep_if method"
 arr.keep_if {|a| a < 4}   #=> []
 puts "Actual array after keep_if: #{arr}" #=> []   
+
+# further work on array class
