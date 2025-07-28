@@ -11,3 +11,13 @@ puts "Using drop method"
 arr_3 = arr.drop_while {|a| a < 4}   #=> [4, 5, 6]
 puts "After drop: #{arr_3}" #=> [4, 5, 6]
 puts "Actual array: #{arr}"                       #=> [1, 2, 3, 4, 5, 6]
+
+# Destructive 
+puts "Using delete_if method"
+arr = [1, 2, 3, 4, 5, 6]
+puts "Actual array: #{arr}" #=> [1, 2, 3, 4, 5, 6]
+puts "After delete_if: #{arr.delete_if {|a| a < 4}}" #=> [4, 5, 6]
+puts "Actual array after delete_if: #{arr}" #=> [4, 5, 6]
+puts "Using keep_if method"
+arr.keep_if {|a| a < 4}   #=> []
+puts "Actual array after keep_if: #{arr}" #=> []   
