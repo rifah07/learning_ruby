@@ -15,11 +15,12 @@ end
 
 def last_three_elements(array)
   # return the last 3 elements of the array
-  array[-3..-1]
+  array[-3..-1] # or array.last(3)
 end
 
 def add_element(array)
   # add an element (of any value) to the array
+  array.push("Apple")  # or array << "Apple"
 end
 
 def remove_last_element(array)
