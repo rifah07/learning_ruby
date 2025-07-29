@@ -41,14 +41,18 @@ end
 
 def array_concatenation(original, additional)
   # return an array adding the original and additional array together
+  additional_array = original + additional  # or original.concat(additional)
+  additional_array
 end
 
 def array_difference(original, comparison)
   # return an array of elements from the original array that are not in the comparison array
+  original - comparison  # or original.reject { |item| comparison.include?(item) }
 end
 
 def empty_array?(array)
   # return true if the array is empty
+  array.empty?
 end
 
 def reverse(array)
