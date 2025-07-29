@@ -57,16 +57,20 @@ end
 
 def reverse(array)
   # return the reverse of the array
+  array.reverse  # or array.reverse!
 end
 
 def array_length(array)
   # return the length of the array
+  array.length
 end
 
 def include?(array, value)
   # return true if the array includes the value
+  array.include?(value)
 end
 
 def join(array, separator)
   # return the result of joining the array with the separator
+  array.join(separator)  # or array * separator
 end
