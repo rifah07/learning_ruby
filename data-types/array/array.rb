@@ -15,3 +15,7 @@ puts Array.new               #=> []
 puts Array.new(3)            #=> [nil, nil, nil]
 puts Array.new(3, 7)         #=> [7, 7, 7]
 puts Array.new(3, true)      #=> [true, true, true]
+
+# you can also create an array with a block: and without "":
+users = %w(john david peter)
+puts users            #=> ["john", "david", "peter"]
