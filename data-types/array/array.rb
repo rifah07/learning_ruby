@@ -19,3 +19,6 @@ puts Array.new(3, true)      #=> [true, true, true]
 # you can also create an array with a block: and without "":
 users = %w(john david peter)
 puts users            #=> ["john", "david", "peter"]
+
+puts users.unshift "robert"  # Adds an element in front of the array
+puts users.shift             # Removes the first element of the array and returns it
