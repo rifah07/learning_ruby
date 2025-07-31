@@ -8,6 +8,7 @@ puts [1, 2].empty?           #=> false
 
 puts "Check the length of the array:"
 puts [1, 2, 3].length        #=> 3
+puts [1, 2, 3].size          #=> 3
 
 puts "Reverse the array:"
 puts [1, 2, 3].reverse       #=> [3, 2, 1]
