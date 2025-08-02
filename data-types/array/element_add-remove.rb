@@ -1,5 +1,5 @@
 num_array = [1, 2, 3, 4, 5]
-# add elementas to the end of an array
+# add elements to the end of an array
 puts "The first approach to add elements to an array is using the push method."
 num_array.push(6)
 puts num_array.inspect  #=> [1, 2, 3, 4, 5, 6]
@@ -7,7 +7,7 @@ puts "The push method can also take multiple arguments to add several elements a
 num_array.push(7,8)
 
 puts num_array.inspect  #=> [1, 2, 3, 4, 5, 6, 7, 8]
-
+#  The inspect method returns the string representation of the array
 num_array << 9
 puts num_array.inspect  #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 puts "The second approach to add elements to an array is using the shovel operator."
