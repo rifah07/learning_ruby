@@ -19,3 +19,11 @@ puts "Array after deleting last element of first sub-array: #{arr}"
 arr = [["test", "hello", "world"],["example", "mem"]]
 puts arr.last.first
 puts "Index of 'example': #{arr[1].index("example")}" # arr[1][0] is "example"
+
+# 4th exercise
+arr = [15, 7, 18, 5, 12, 8, 5, 1]
+puts "Original array: #{arr}"
+puts "See the outputs below"
+puts arr.index(5)
+puts arr[5]
+puts arr.index[5]
