@@ -4,6 +4,6 @@ number = 3
 if arr.include?(number)
   puts "#{number} is in the array."
   puts "The index of #{number} is #{arr.index(number)}."
-  else
+else
     puts "#{number} is not in the array."
-  end
+end
