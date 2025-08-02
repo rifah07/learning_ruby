@@ -13,3 +13,9 @@ arr = arr.product([Array(1..3)])
 puts "Array after product with nested array: #{arr}"
 arr.first.delete(arr.first.last)
 puts "Array after deleting last element of first sub-array: #{arr}"
+
+# 3rd exercise
+# how can you print 'example'
+arr = [["test", "hello", "world"],["example", "mem"]]
+puts arr.last.first
+puts "Index of 'example': #{arr[1].index("example")}" # arr[1][0] is "example"
