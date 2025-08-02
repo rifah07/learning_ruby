@@ -39,3 +39,11 @@ puts "Character at index 6: #{a}"
 puts "Character at index 11: #{b}"
 puts "Character at index 18: #{c}"
 puts "Character at index 19: #{d}"
+
+# 6th exercise
+# Use the each_with_index method to iterate through an array of your creation that prints each index and value of the array.
+
+arr = ['Ruby', 'is', 'fun', 'to', 'learn']
+arr.each_with_index do |value, index|
+  puts "Index #{index}: #{value}"
+end
