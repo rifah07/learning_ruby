@@ -26,4 +26,16 @@ puts "Original array: #{arr}"
 puts "See the outputs below"
 puts arr.index(5)
 puts arr[5]
-puts arr.index[5]
+#puts arr.index[5] # prints nothing because index is a method, not an array
+
+# 5th exercise
+string = "Welcome to America!"
+a = string[6]
+b = string[11]
+c = string[18]
+d = string[19] # This will return nil since index 19 is out of bounds for the string length
+puts "Original string: #{string}"
+puts "Character at index 6: #{a}"
+puts "Character at index 11: #{b}"
+puts "Character at index 18: #{c}"
+puts "Character at index 19: #{d}"
