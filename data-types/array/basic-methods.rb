@@ -22,7 +22,7 @@ puts [1, 2, 3].join          #=> "123"
 puts [1, 2, 3].join("-")     #=> "1-2-3"
 
 puts "Use array in a variable:"
-arr = [1,2,3,4,5,6]
+arr = [1,2,3,4,5,6,7,8,9,10]
 puts "The array is: #{arr}"
 puts "Access elements in the array:"
 puts arr[0]                 #=> 1
@@ -43,6 +43,21 @@ puts arr.fetch(10, "oops")  #=> "oops"
 puts "Access elements with slice:"
 puts arr.slice(0)               #=> 1
 
+# The forms of the slice method return one array element.
+# The code line returns the first element.
+puts arr.slice(0, 3).inspect #=> [1, 2, 3]
+# The first parameter is the start index and the second parameter is the length.
+# In this code line, we return 3 elements starting from index 0.
+puts "Access elements with slice using range:"
+puts arr.slice(2..6).inspect
+puts arr.slice(2...6).inspect
+
+# We can use range operator with the slice method.
+# In the first line we read elements from index 2 to 6, in the second line elements from 2 to 5.
+
+
+arr = [1,2,3,4,5,6,7,8,9,10]
+
 puts "Use take method:"
 puts "Without inspect: "
 puts arr.take(3)               #=> [1, 2, 3]; Here we return the first three elements of the array.
@@ -62,9 +77,9 @@ puts arr.count               #=> 6
 puts arr.count(2)            #=> 1
 
 puts "Insert elements into the array:"
-puts arr.insert(3, 'apple') #=> [1, 2, 3, "apple", 4, 5, 6]
+puts arr.insert(3, 'apple') #=> [1, 2, 3, "apple", 4, 5, 6, 7, 8, 9, 10]
 arr.insert(3, 'orange', 'pear', 'grapefruit')
-puts arr                  #=> [1, 2, 3, "orange", "pear", "grapefruit", 4, 5, 6]
+puts arr                  #=> [1, 2, 3, "orange", "pear", "grapefruit", 4, 5, 6, 7, 8, 9, 10]
 
 puts "Delete elements from the array:"
 puts arr.delete_at(2)     #=> "3"
