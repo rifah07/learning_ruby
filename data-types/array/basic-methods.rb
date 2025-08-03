@@ -36,6 +36,9 @@ puts "Access elements with fetch:"
 puts arr.fetch(0)               #=> 1
 #puts arr.fetch(10)               #=> IndexError
 puts arr.fetch(10, "oops")  #=> "oops"
+# This form of the fetch method returns the element with the given index.
+# If the index lies outside the array elements, the method returns the default value, 'oops' in our case.
+# Without the second parameter, the fetch method throws an IndexError, as shown in 2nd fetch line
 
 puts "Access elements with slice:"
 puts arr.slice(0)               #=> 1
