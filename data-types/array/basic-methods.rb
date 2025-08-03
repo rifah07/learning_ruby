@@ -43,8 +43,18 @@ puts arr.fetch(10, "oops")  #=> "oops"
 puts "Access elements with slice:"
 puts arr.slice(0)               #=> 1
 
-puts "Use take and drop methods:"
-puts arr.take(3)               #=> [1, 2, 3]
+puts "Use take method:"
+puts "Without inspect: "
+puts arr.take(3)               #=> [1, 2, 3]; Here we return the first three elements of the array.
+print "With inspect: "
+puts arr.take(3).inspect       #=> [1, 2, 3]
+arr2= arr.take_while { |x| x < 5 }
+print "Take while: "
+# Here we create a new array from the original array.
+# In the new array we have all characters that come before the value 5.
+puts arr2.inspect               #=> [1, 2, 3, 4]
+
+puts "Use drop method:"
 puts arr.drop(3)               #=> [4, 5, 6]
 
 puts "Use count method:"
