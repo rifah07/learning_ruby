@@ -1,4 +1,5 @@
 arr = %w{a b c d e f g h i j}
+# In Ruby, %w{} is a word array literal that creates an array of strings. The w stands for "words".
 
 puts arr.sample
 puts arr.sample(3).inspect
