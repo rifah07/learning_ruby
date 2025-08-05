@@ -6,3 +6,6 @@ puts 7 / 3      # => 2   (same, because both operands are integers)
 
 puts 7.div(3.0) # => 2   (floor of 2.333…)
 puts 7 / 3.0    # => 2.3333333333333335   (normal float division)
+
+puts 7.div(-3)  # => -3   (because -2.333… floors to -3)[53]
+puts 7 / -3     # => -2   (normal float division rounds towards zero)
