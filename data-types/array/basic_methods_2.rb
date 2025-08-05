@@ -20,5 +20,23 @@ puts "After clear:"
 puts lts.inspect
 # The clear method removes all elements from the array.
 # After the clear method, the array is empty.
-puts lts.inspect
 puts lts.empty?
+
+
+# another part
+
+chars = %w{a b c d e}
+
+reversed_chars = chars.reverse
+puts reversed_chars.inspect
+puts chars.inspect
+
+reversed_chars = chars.reverse!
+puts reversed_chars.inspect
+puts chars.inspect
+
+# Ruby has, among others, two similar methods, the reverse method and reverse! method.
+# These two methods change the order of the elements, they reverse it.
+# The difference is that the reverse method returns a reversed array and
+# leaves the original array intact, while the reverse! method both modifies the contents of the original array.
+
