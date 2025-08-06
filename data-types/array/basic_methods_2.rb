@@ -40,3 +40,21 @@ puts chars.inspect
 # The difference is that the reverse method returns a reversed array and
 # leaves the original array intact, while the reverse! method both modifies the contents of the original array.
 
+# another example
+
+numbers = [1, 2, 2, 2, 3, 4, 5, 8, 11]
+
+puts "Numbers array:"
+puts numbers.inspect
+puts numbers.length
+puts numbers.first
+puts numbers.last
+puts numbers.index 2
+puts numbers.index 11
+puts numbers.rindex 2
+
+puts numbers.include? 3
+puts numbers.include? 10
+
+puts numbers.join '-'
+puts numbers.uniq!.inspect
