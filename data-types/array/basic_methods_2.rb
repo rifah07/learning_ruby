@@ -66,4 +66,12 @@ puts numbers.include? 3
 puts numbers.include? 10
 
 puts numbers.join '-'
+# The join method returns a string created from the array elements, separated by a provided separator.
+puts numbers.join ' '
+
 puts numbers.uniq!.inspect
+
+# The uniq! method removes duplicate elements from the array.
+# We have three times number 2 in the array. After the method call, there will be only one 2 left.
+
+# reference: https://zetcode.com/lang/rubytutorial/arrays/
