@@ -51,7 +51,16 @@ puts numbers.first
 puts numbers.last
 puts numbers.index 2
 puts numbers.index 11
+# The index method returns the index of the array element.
+# It returns the index of the first element from the left.
+# The first line returns 1, which is the index of the first 2 in the array.
+# There is only one 11 in the array and its index is 8.
+
 puts numbers.rindex 2
+# The rindex returns the index of the first element from the right. In our case, the rightmost 2 has index 3.
+puts numbers.rindex 11
+# The rindex method returns the index of the first element from the right.
+# In our case, the rightmost 11 has index 8.
 
 puts numbers.include? 3
 puts numbers.include? 10
