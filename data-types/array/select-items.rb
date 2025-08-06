@@ -22,4 +22,32 @@ puts "Using keep_if method"
 arr.keep_if {|a| a < 4}   #=> []
 puts "Actual array after keep_if: #{arr}" #=> []   
 
-# further work on array class
+# let;s see select, collect and map methods
+
+# select method
+arr = [1, 2, 3, 4, 5, 6]
+
+puts "Using select method"
+selected = arr.select do |e|
+  e > 3
+end
+
+# collect method
+
+collected = arr.collect do |e|
+  e < 4 
+end
+
+puts "Using collect method"
+puts "Actual array: #{arr.inspect}" #=> [1, 2, 3, 4, 5, 6]
+puts "After collect: #{collected.inspect}" #=> [true, true, true, false, false, false]
+
+# map method
+
+mapped = arr.map do |e|
+  e**2
+end
+
+puts "Using map method"
+puts "Actual array: #{arr.inspect}" #=> [1, 2, 3, 4, 5, 6]
+puts "After map: #{mapped.inspect}" #=> [1, 4, 9, 16, 25, 36]
