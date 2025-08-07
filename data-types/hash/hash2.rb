@@ -8,3 +8,11 @@ puts my_hash
 # another way to create an empty hash
 my_hash = Hash.new
 puts my_hash               #=> {}
+
+# another way to create a hash with default values
+shoes = {
+  "summer" => "sandals",
+  "winter" => "boots"
+}
+
+puts shoes["summer"]   #=> "sandals"
