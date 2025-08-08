@@ -44,6 +44,12 @@ shoes = Hash.new("not found")
 print "Check shoes hash with default value: "
 puts shoes["spring"]   #=> "not found"
 
+# Sometimes, this behavior can be problematic for you if silently
+# returning a nil value could potentially wreak havoc in your program.
+# Luckily, hashes have a fetch method that will raise an error when you try to access a key that is not in your hash.
+
+print "Using fetch method to access a key: #{shoes.fetch("autumn", "this is blank")}\n"
+
 
 # Hashes are mutable, allowing you to add, modify, and delete key-value pairs after creation.
 # They support various methods for iteration, merging, and manipulation,
