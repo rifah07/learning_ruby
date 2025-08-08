@@ -34,3 +34,11 @@ shoes = {
 }
 
 puts shoes["summer"]   #=> "sandals"
+
+
+# Hashes are mutable, allowing you to add, modify, and delete key-value pairs after creation.
+# They support various methods for iteration, merging, and manipulation,
+# making them versatile data structures for organizing related information.
+
+# The Ruby hash implementation requires keys to be hashable objects that respond to the
+# hash and eql? methods, ensuring efficient storage and retrieval
