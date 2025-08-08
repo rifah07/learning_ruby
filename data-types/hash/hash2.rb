@@ -22,9 +22,11 @@ my_hash = {
   "an array" => [1, 2, 3],
   "an empty hash within a hash" => {}
 }
-puts my_hash
+print "Check my_hash: "
+p my_hash
 # another way to create an empty hash
 my_hash = Hash.new
+print "Check empty hash: "
 puts my_hash               #=> {}
 
 # another way to create a hash with default values
@@ -32,8 +34,15 @@ shoes = {
   "summer" => "sandals",
   "winter" => "boots"
 }
-
+print "Check shoes hash: "
 puts shoes["summer"]   #=> "sandals"
+print "Check shoes hash for a non-existing key: "
+puts shoes["autumn"]  #=> nil
+
+# To provide a default value for missing keys, you can use:
+shoes = Hash.new("not found")
+print "Check shoes hash with default value: "
+puts shoes["spring"]   #=> "not found"
 
 
 # Hashes are mutable, allowing you to add, modify, and delete key-value pairs after creation.
