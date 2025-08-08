@@ -1,3 +1,21 @@
+# Ruby hashes store data as associative arrays where keys can be any hashable object (strings, symbols, integers, etc.)
+# and values can be any Ruby object. Unlike arrays which use numeric indices,
+# hashes allow you to look up values using meaningful keys, making them ideal for representing structured data
+
+# Hashes maintain insertion order in modern Ruby versions, meaning they preserve the sequence
+# in which key-value pairs were added.
+# When accessing a key that doesn't exist, Ruby returns nil by default.
+
+# There are two main syntaxes for creating hashes:
+# Traditional syntax using the "hash rocket" (=>):
+old_syntax = { "name" => "Alice", "age" => 30 }
+
+
+# Modern syntax for symbol keys:
+person = { name: "Alice", age: 30 }
+# Both syntaxes are valid, but the modern syntax is more concise and preferred for symbol keys.
+
+# another example of hash with hash rocket: =>
 my_hash = {
   "a random word" => "ahoy",
   "Dorothy's math test score" => 94,

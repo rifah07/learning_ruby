@@ -46,3 +46,8 @@ So, to create a symbol, put a colon at the beginning of some text.
 ## Boolean
 
 The Boolean values: true represents something that is true, and false represents something that is false. In Ruby, nil represents “nothing”. Everything in Ruby has a return value. When a piece of code doesn’t have anything to return, it will return nil. 
+
+--- 
+
+## Hash
+A hash in Ruby is a dictionary-like collection of key-value pairs where each unique key maps to a specific value. Hash objects are similar to arrays but use arbitrary keys rather than ordered indices for accessing values.
