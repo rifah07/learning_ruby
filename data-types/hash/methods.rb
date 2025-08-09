@@ -22,3 +22,7 @@ hash2 = { "b" => 300, "c" => 400 }
 merged_hash = hash1.merge(hash2)
 print "Merged hash: "
 p merged_hash
+
+merged_hash2 = hash2.merge(hash1)
+print "Merged hash 2: "
+p merged_hash2
