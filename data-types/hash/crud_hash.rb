@@ -1,3 +1,5 @@
+# create hash
+
 shoes = {
   "summer" => "sandals",
   "winter" => "boots"
