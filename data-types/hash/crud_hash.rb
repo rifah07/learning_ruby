@@ -21,3 +21,10 @@ shoes.delete("winter")
 print "Shoes hash after removing winter: "
 p shoes
 p shoes["winter"]
+
+# update data
+shoes["fall"] = "boots"
+print "Shoe for fall after update: "
+puts shoes["fall"]
+print "Shoes hash after update: "
+p shoes
