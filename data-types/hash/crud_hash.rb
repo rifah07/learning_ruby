@@ -24,6 +24,7 @@ print "Shoes hash after removing winter: "
 p shoes
 p shoes["winter"]
 
+
 # update data
 shoes["fall"] = "boots"
 print "Shoe for fall after update: "

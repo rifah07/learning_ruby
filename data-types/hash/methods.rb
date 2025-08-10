@@ -26,3 +26,10 @@ p merged_hash
 merged_hash2 = hash2.merge(hash1)
 print "Merged hash 2: "
 p merged_hash2
+
+# A simpler kind of hash is called a Set, and it’s just a hash where
+# all the values are either True or False. It’s useful because your computer can search
+# more quickly through this than an array trying to store the same information due to
+# the way it’s set up behind the scenes. You’ll encounter them in some of the exercises later.
+# reference: https://eriktrautman.com/posts/ruby-explained-hashes
+
