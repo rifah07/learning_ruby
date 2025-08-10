@@ -1,3 +1,4 @@
+# Keys can be either strings or symbols.
 # 'Rocket' syntax
 american_cars = {
   :chevrolet => "Corvette",

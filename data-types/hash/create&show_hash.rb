@@ -29,6 +29,11 @@ my_hash = Hash.new
 print "Check empty hash: "
 puts my_hash               #=> {}
 
+# another way to create an empty hash
+my_hash = {}
+print "Check empty hash: "
+p my_hash               #=> {}
+
 # another way to create a hash with default values
 shoes = {
   "summer" => "sandals",

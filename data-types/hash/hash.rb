@@ -4,6 +4,7 @@
 # create a hash
 # A hash in Ruby is a dictionary-like collection of key-value pairs where each unique key maps to a specific value.
 # Hash objects are similar to arrays but use arbitrary keys rather than ordered indices for accessing values
+# Keys can be either strings or symbols.
 person = {name: "Alice", age: 24, city: "California"}
 
 puts "Check if key exist"
