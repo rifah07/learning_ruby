@@ -23,3 +23,7 @@ we know that when we’re talking about Ruby, “methods” and “functions” 
 - The Odin Project
 =end
 
+=begin
+Pound signs (#), they’re just the convention for writing out Ruby instance methods.
+i.e. #times loop and #upto loop , Integer#upto, or #upto,
+=end
