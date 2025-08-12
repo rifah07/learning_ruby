@@ -46,3 +46,13 @@ def greet(name)
 end
 
 puts greet("Rifah")
+
+# Default parameters
+
+def greet(name = "stranger")
+  "Hello, " + name + "!"
+end
+
+puts greet("Jane") #=> Hello, Jane!
+puts greet #=> Hello, stranger!
+
