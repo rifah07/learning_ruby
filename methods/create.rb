@@ -60,7 +60,7 @@ puts greet #=> Hello, stranger!
 Ruby is one of the few languages that offers implicit return for methods,
 which means that a Ruby method will return the last expression that was evaluated even without the return keyword.
 The last expression that was evaluated may or may not be the last line in the code,
-but it will always be the last evaluated expression.
+but it will always be the last evaluated expression. - The Odin Project
 =end
 
 def even_odd(number)
@@ -74,3 +74,15 @@ end
 puts even_odd(16) #=>  That is an even number.
 puts even_odd(17) #=>  That is an odd number.
 
+
+=begin 
+Even though Ruby offers the ease of using implicit returns, explicit returns still have a place in Ruby code.
+An explicit return (using the keyword return) essentially tells Ruby, “This is the last expression you should evaluate.”
+- The Odin Project
+=end
+def my_name
+  return "Joe Smith"
+  "Jane Doe"
+end
+
+puts my_name #=> "Joe Smith"
