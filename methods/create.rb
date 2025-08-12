@@ -15,3 +15,26 @@ puts my_name
 - 'end' is a built-in keyword that tells Ruby that this is the end of the method definition.
 To call the method, you need to use its name, as shown in the last line of the example.
 =end
+
+# It’s good practice to start the method name with a lower-case character,
+# because names that start with capital letters are constants in Ruby.
+
+=begin
+Here are some things you are not allowed to do with your method names:
+
+- You cannot name your method one of Ruby’s approximately 40 reserved words, such as end, while, or for.
+- You cannot use any symbols other than _, ?, !, and =.
+- You cannot use ?, !, or = anywhere other than at the end of the name.
+- You cannot begin a method name with a number.
+=end
+
+examples of valid and invalid method names:
+
+method_name      # valid
+_name_of_method  # valid
+1_method_name    # invalid
+method_27        # valid
+method?_name     # invalid
+method_name!     # valid
+begin            # invalid (Ruby reserved word)
+begin_count      # valid
