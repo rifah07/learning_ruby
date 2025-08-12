@@ -28,8 +28,8 @@ Here are some things you are not allowed to do with your method names:
 - You cannot begin a method name with a number.
 =end
 
-examples of valid and invalid method names:
-
+=begin
+Examples of valid and invalid method names:
 method_name      # valid
 _name_of_method  # valid
 1_method_name    # invalid
@@ -38,3 +38,11 @@ method?_name     # invalid
 method_name!     # valid
 begin            # invalid (Ruby reserved word)
 begin_count      # valid
+=end
+
+# Method with parameter:
+def greet(name)
+  "Hello, " + name + "!"
+end
+
+puts greet("Rifah")
