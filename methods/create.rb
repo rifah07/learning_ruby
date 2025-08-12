@@ -56,3 +56,21 @@ end
 puts greet("Jane") #=> Hello, Jane!
 puts greet #=> Hello, stranger!
 
+=begin
+Ruby is one of the few languages that offers implicit return for methods,
+which means that a Ruby method will return the last expression that was evaluated even without the return keyword.
+The last expression that was evaluated may or may not be the last line in the code,
+but it will always be the last evaluated expression.
+=end
+
+def even_odd(number)
+  if number % 2 == 0
+    "That is an even number."
+  else
+    "That is an odd number."
+  end
+end
+
+puts even_odd(16) #=>  That is an even number.
+puts even_odd(17) #=>  That is an odd number.
+
