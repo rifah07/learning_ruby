@@ -11,3 +11,7 @@ puts phrase.reverse.join(" ").capitalize
 # - reverse: reverses the order of the elements in the array
 # - join: combines the elements of the array into a single string, with a space in between each element
 # - capitalize: capitalizes the first letter of the string
+
+# another method
+p "hi there".length.to_s      # returns "8" - a String
+p 8
