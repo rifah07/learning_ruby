@@ -4,6 +4,8 @@
 
 The call stack is a fundamental data structure that Ruby uses to keep track of method calls and their execution context. Think of it as a stack of plates - you can only add or remove plates from the top, and the last plate you put on is the first one you take off (LIFO - Last In, First Out).
 
+In Ruby, methods aren't the only thing that uses the call stack. Blocks, procs, and lambdas also use the call stack; in fact, they all use the same call stack as Ruby uses for methods. For simplicity, we will usually just mention methods when discussing the call stack. However, you should always remember that blocks, procs, and lambdas are also part of this process. - The Odin Project
+
 ## How Ruby Executes Code
 
 ### The Ruby Virtual Machine (VM)
