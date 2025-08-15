@@ -39,3 +39,17 @@ end
 p "Before mutate method: #{a}"
 mutate(a)
 p "After mutate method: #{a}"
+
+# another example
+def second
+  a = 3 + 4
+  puts "second method"  # This is the last statement, and puts returns nil
+end
+
+print "The return value of second method is: "
+puts second
+
+# to see actual return value this code below works
+result = second
+print "The return value is: "
+p result
