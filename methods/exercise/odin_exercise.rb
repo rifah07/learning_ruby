@@ -53,3 +53,22 @@ end
 puts lucky_number()
 puts lucky_number(3)
 puts ""
+
+
+# method name: #ascii_code
+# parameter: character (a string)
+# return value: the character's ordinal number
+# explicit return value: 'Input Error' if character's length does not equal 1
+# hint: use String#ord
+
+def ascii_code (character)
+  if character.length == 1
+    character.ord
+  else
+    "Input Error"
+  end
+end
+
+puts ascii_code("A")
+puts ascii_code("AB")
+puts ""
