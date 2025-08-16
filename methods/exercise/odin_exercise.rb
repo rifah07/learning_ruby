@@ -13,3 +13,15 @@ end
 
 puts ascii_translator(65)
 puts ascii_translator(128)
+
+
+# method name: #common_sports
+# parameters: current_sports and favorite_sports (both arrays)
+# return value: an array containing items in both arrays
+# hint: use Array#intersection
+
+def common_sports (current_sports, favorite_sports)
+  current_sports.intersection(favorite_sports)
+end
+print "Common sport(s) is/are: "
+puts common_sports(["soccer", "basketball", "tennis"], ["tennis", "baseball"])
