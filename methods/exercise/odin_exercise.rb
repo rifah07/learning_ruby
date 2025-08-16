@@ -39,3 +39,17 @@ end
 
 print "Unique and sorted list of alphabets: "
 p alphabetical_list(["a", "c", "b", "a"])
+puts ""
+
+
+# method name: #lucky_number
+# parameter: number (an integer) with default value of 7
+# return value: a string "Today's lucky number is <number>"
+
+def lucky_number (number = 7)
+  "Today's lucky number is #{number}"
+end
+
+puts lucky_number()
+puts lucky_number(3)
+puts ""
