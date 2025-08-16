@@ -96,3 +96,17 @@ pet_pun('cat')
 pet_pun('dog')
 pet_pun('hamster')
 puts ""
+
+
+# method name: #twenty_first_century?
+# parameter: year (an integer)
+# return value: true if the year is between 2001 - 2100, otherwise return false
+# hint: use Comparable#between?
+
+def twenty_first_century?(year)
+  year.between?(2001, 2100)
+end
+
+puts twenty_first_century?(2023) # true
+puts twenty_first_century?(1999) # false
+puts ""
