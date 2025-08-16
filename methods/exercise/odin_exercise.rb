@@ -72,3 +72,27 @@ end
 puts ascii_code("A")
 puts ascii_code("AB")
 puts ""
+
+
+# method name: #pet_pun
+# parameter: animal (a string)
+# return value: nil
+# console output: if animal is 'cat', 'Cats are purr-fect!' (perfect)
+# console output: if animal is 'dog', 'Dogs are paw-some!' (awesome)
+# console output: otherwise, "I think <animal>s have pet-tential!" (potential)
+# hint: use puts
+
+def pet_pun(animal)
+  if animal == 'cat'
+    puts  'Cats are purr-fect!'
+  elsif animal == 'dog'
+    puts 'Dogs are paw-some!'
+  else
+    puts "I think #{animal}s have pet-tential!"
+  end
+end
+
+pet_pun('cat')
+pet_pun('dog')
+pet_pun('hamster')
+puts ""
