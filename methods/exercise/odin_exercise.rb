@@ -13,7 +13,7 @@ end
 
 puts ascii_translator(65)
 puts ascii_translator(128)
-
+puts ""
 
 # method name: #common_sports
 # parameters: current_sports and favorite_sports (both arrays)
@@ -25,3 +25,17 @@ def common_sports (current_sports, favorite_sports)
 end
 print "Common sport(s) is/are: "
 puts common_sports(["soccer", "basketball", "tennis"], ["tennis", "baseball"])
+puts ""
+
+
+# method name: #alphabetical_list
+# parameter: games (an array)
+# return value: games, alphabetically sorted and duplicates removed
+# hint: chain Array#uniq and Array#sort together
+
+def alphabetical_list (games)
+  games.uniq.sort
+end
+
+print "Unique and sorted list of alphabets: "
+p alphabetical_list(["a", "c", "b", "a"])
