@@ -23,7 +23,7 @@ require 'pry-byebug'
 
 def isogram? (word)
   len = word.length
-  word_to_array = word.downcase.split("")
+  word_to_array = word.downcase.split
   len2 = word_to_array.uniq.length
   len == len2
 
