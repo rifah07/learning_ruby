@@ -1,4 +1,7 @@
 #isogram (a word that has no repeating letters) 
+
+require 'pry-byebug'
+
 def isogram (word)
   len = word.length
   word_to_array = word.downcase.split("")
@@ -10,3 +13,7 @@ puts "Isogram check for 'word': #{isogram('word')}" #=> true
 puts "Isogram check for 'isogram': #{isogram('isogram')}" #=> true
 puts "Isogram check for 'odin': #{isogram('odin')}" #=> true
 puts "Isogram check for 'Sleep': #{isogram('Sleep')}" #=> false
+
+# use pry to debug
+# install pry-depug: gem install pry-byebug
+# use it at the 1st line of code: require 'pry-byebug'
