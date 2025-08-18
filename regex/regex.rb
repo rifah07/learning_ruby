@@ -13,3 +13,6 @@
   p powerball =~ /b/
   # This will return the index of the first match, or nil if no match is found.
   # In this case, it will return 1, since "b" is at index 1 in "powerball".
+
+# The order of the string and regex don't usually matter when using =~. Thus, we can also write the above as:
+p /b/ =~ powerball
