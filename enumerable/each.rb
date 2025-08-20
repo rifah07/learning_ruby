@@ -30,3 +30,11 @@ my_hash.each { |key, value| puts "#{key} is #{value}" }
 
 puts "Hash with pair"
 my_hash.each { |pair| puts "the pair is #{pair}" }
+
+
+
+# there is difference between puts inside each
+# outside puts prints the same array regardless of what happens inside
+flowers.each { |flower| puts flower.upcase }
+puts flowers.each { |flower| flower.upcase }
+
