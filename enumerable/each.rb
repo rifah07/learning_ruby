@@ -17,3 +17,13 @@ flowers.each do |flower|
     puts "I like #{flower}."
   end
 end
+
+=begin
+each also works for hashes with a bit of added functionality. By default, each iteration 
+will yield both the key and value individually or together (as an array) 
+to the block depending on how you define your block variable
+=end
+
+my_hash = { "one" => 1, "two" => 2 }
+
+my_hash.each { |key, value| puts "#{key} is #{value}" }
