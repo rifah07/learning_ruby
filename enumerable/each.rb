@@ -27,3 +27,6 @@ to the block depending on how you define your block variable
 my_hash = { "one" => 1, "two" => 2 }
 
 my_hash.each { |key, value| puts "#{key} is #{value}" }
+
+puts "Hash with pair"
+my_hash.each { |pair| puts "the pair is #{pair}" }
