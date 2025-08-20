@@ -22,3 +22,7 @@ puts liked_fruits
 # now with less code we can do the same task
  liked_fruits_1 = fruits.select { |fruit| fruit != "jackfruit" }
  puts "With enumerable: #{liked_fruits_1}"
+
+ # or we can also do this
+ liked_fruits_2 = fruits.reject {|fruit| fruit == "jackfruit"}
+ puts "With enumerable reject: #{liked_fruits_2}"
