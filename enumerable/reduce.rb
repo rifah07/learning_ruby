@@ -12,3 +12,8 @@ The result of each iteration is stored in the accumulator and then passed to the
 The accumulator is also the value that the #reduce method returns at the end of its work. By default,
 the initial value of the accumulator is the first element in the collection, so for each step of the iteration
 =end
+
+# We can also set a different initial value for the accumulator by directly passing in a value to the #reduce method.
+nums2 = [2, 4, 6, 8]
+
+p nums2.reduce(100) {|acc, n| acc + n} #120
