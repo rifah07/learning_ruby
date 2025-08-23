@@ -17,6 +17,7 @@ flowers.each do |flower|
     puts "I like #{flower}."
   end
 end
+# do: A Ruby keyword that signifies the beginning of a block of code
 
 =begin
 each also works for hashes with a bit of added functionality. By default, each iteration 
