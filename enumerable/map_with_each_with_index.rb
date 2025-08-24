@@ -16,6 +16,8 @@ animals = ['cat', 'goat', 'dog', 'cow']
 new_animals = animals.each_with_index.map do |animal , idx|
    if idx.odd?
       animal.upcase.reverse
+   else 
+      animal
    end
 end
 
