@@ -29,7 +29,7 @@ p data_hash1
 
 # here is another way with inject
 data_hash2 = data_arr.inject({}) do |hsh, d|
-  hsh.merge({d[0] => d[1]})
+  hsh.merge({d[0] => d[1]}) #  this is slower computationally
 end
 
 print "Hash using inject (using merge) : "
