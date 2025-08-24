@@ -6,4 +6,4 @@ sum = nums.inject(0) do |acc, num|
  
 p sum
 
-# The inject method takes a collection and reduces it to a single value, such as a sum of values:
+# The inject method takes a collection and reduces it to a single value, such as a sum of values.
