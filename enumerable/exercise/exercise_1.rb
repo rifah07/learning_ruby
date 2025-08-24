@@ -16,3 +16,21 @@ print "2D Array: "
 p data_arr
 print "Hash: "
 p data_hash
+
+
+# let's use inject now
+data_hash1 = data_arr.inject({}) do |hsh, d|
+  hsh[d[0]] = d[1]
+  hsh
+end
+
+print "Hash using inject: "
+p data_hash1
+
+# here is another way with inject
+data_hash2 = data_arr.inject({}) do |hsh, d|
+  hsh.merge({d[0] => d[1]})
+end
+
+print "Hash using inject (using merge) : "
+p data_hash2
