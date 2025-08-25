@@ -18,3 +18,8 @@ puts "First number between 3 and 7 is: #{result1}"
 names = ["John", "Alice", "Shubman", "Bob"]
 result2 = names.detect {|name| name.length > 5}
 puts "First name longer than 5 characters is: #{result2}"
+
+# example with hash
+cities = { "New York" => 30000, "Tokyo" => 40000, "Paris" => 20000 }
+result3 = cities.detect {|city, population| population > 25000}
+puts "First city and population quantity with a population over 25000 is: #{result3}"
