@@ -9,3 +9,12 @@ numbers = [1, 2, 3, 4, 5]
 
 result = numbers.detect {|num| num.even?}
 puts "First even number in the array is: #{result}"
+
+# another example
+result1= (1..10).detect {|n| n.between?(3, 7)}
+puts "First number between 3 and 7 is: #{result1}"
+
+# another example
+names = ["John", "Alice", "Shubman", "Bob"]
+result2 = names.detect {|name| name.length > 5}
+puts "First name longer than 5 characters is: #{result2}"
