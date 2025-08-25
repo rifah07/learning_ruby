@@ -34,3 +34,14 @@ end
 
 print "Hash using inject (using merge) : "
 p data_hash2
+
+=begin Convert the result of the above exercise back into an array,
+but with the first and second elements' positions swapped from the original data_arr
+=end
+
+data_arr2 = data_hash.inject([]) do |arr, v|
+  arr << [v[1], v[0]]
+end
+
+print "2D Array with positions swapped: "
+p data_arr2
