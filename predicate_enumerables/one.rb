@@ -5,3 +5,7 @@ Ruby has you covered with the #one? method,
 which returns true if the block evaluates to true for exactly one element.
   - The Odin Project
 =end
+
+flowers = ["rose", "lily", "daisy"]
+
+puts flowers.one? { |flower| flower.length == 5 }
