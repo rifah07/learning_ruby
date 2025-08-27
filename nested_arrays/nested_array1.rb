@@ -46,7 +46,6 @@ puts "Single value (nonexistent index) : #{friends_names[2][3]}" # nil
 =begin
 From The Odin Project:
 If you want a nil value returned when trying to access an index of a
-nonexistent nested element, you can use the #dig method. This method can also be used
-when accessing a nonexistent index inside of an existing nested element.
+nonexistent nested element, you can use the #dig method.
 =end
 puts "Index of nonexistent element : #{friends_names.dig(3, 0)}" # nil
