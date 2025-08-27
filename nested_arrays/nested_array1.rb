@@ -29,3 +29,15 @@ puts "Single value : #{friends_names[2][2]}"
 puts "Single value (negative index) : #{friends_names[0][-1]}"
 puts "Single value (negative index) : #{friends_names[1][-2]}"
 puts "Single value (negative index) : #{friends_names[2][-1]}"
+
+=begin
+From The Odin Project:
+If you try to access an index of a nonexistent nested element, it will raise an NoMethodError,
+because the nil class does not have a [] method. However, just like a regular array,
+if you try to access a nonexistent index inside of an existing nested element, it will return nil.
+=end
+
+puts "Single value (nonexistent index) : #{friends_names[0][3]}" # nil
+puts "Single value (nonexistent index) : #{friends_names[1][3]}" # nil
+puts "Single value (nonexistent index) : #{friends_names[2][3]}" # nil
+puts "Single value (nonexistent index) : #{friends_names[3][0]}" # NoMethodError
