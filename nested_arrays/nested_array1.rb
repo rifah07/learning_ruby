@@ -24,3 +24,8 @@ puts "Single value : #{friends_names[0][0]}"
 puts "Single value : #{friends_names[1][2]}"
 puts "Single value : #{friends_names[1][1]}"
 puts "Single value : #{friends_names[2][2]}"
+
+# We can also use negative indices to return elements from the end of an array, starting at [-1].
+puts "Single value (negative index) : #{friends_names[0][-1]}"
+puts "Single value (negative index) : #{friends_names[1][-2]}"
+puts "Single value (negative index) : #{friends_names[2][-1]}"
