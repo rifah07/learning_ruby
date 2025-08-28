@@ -22,3 +22,8 @@ p english_scores.flatten
 english_scores[0].push(100)
 print "Array after adding a new element via push (2D): "
 p english_scores
+
+# remove element
+english_scores.pop
+puts "Array after removing the last row (2D): "
+p english_scores
