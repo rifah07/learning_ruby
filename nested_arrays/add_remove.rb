@@ -17,3 +17,8 @@ p english_scores
 =begin print "Array after adding a new row (flattened 1D): "
 p english_scores.flatten
 =end
+
+# another way to add element (in specific index)
+english_scores[0].push(100)
+print "Array after adding a new element via push (2D): "
+p english_scores
