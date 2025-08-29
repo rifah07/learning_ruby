@@ -27,3 +27,7 @@ p english_scores
 english_scores.pop
 puts "Array after removing the last row (2D): "
 p english_scores
+
+english_scores[0].pop
+puts "Array after removing the last element from the first row (2D): "
+p english_scores
