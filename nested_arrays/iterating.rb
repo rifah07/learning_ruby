@@ -16,3 +16,16 @@ animals.each do |category, names|
     end
   end
 end
+
+
+#another example
+test_scores = [[97, 76, 79, 93], [79, 84, 76, 79], [88, 67, 64, 76], [94, 85, 97, 81]]
+puts "Test Scores: #{test_scores}"
+#=> [[97, 76, 79, 93], [79, 84, 76, 79], [88, 67, 64, 76], [94, 85, 97, 81]]
+
+result = test_scores.any? do |scores|
+  scores.all? { |score| score > 80 }
+end
+
+puts "Any student scored above 80 in all tests? #{result}"
+#=> false
