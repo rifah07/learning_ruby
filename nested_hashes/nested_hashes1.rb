@@ -9,3 +9,13 @@ puts vehicles[:blake][:make]
 #=> "Volkswagen"
 puts vehicles[:caleb][:model]
 #=> "Accord"
+
+#puts vehicles[:zoe][:year]
+#=> NoMethodError
+puts vehicles.dig(:zoe, :year)
+#=> nil
+puts vehicles[:alice][:color]
+#=> nil
+puts vehicles.dig(:alice, :color)
+#=> nil
+
