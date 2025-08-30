@@ -4,5 +4,8 @@ vehicles = {
   caleb: {year: 2020, make: "Honda", model: "Accord"}
 }
 puts vehicles[:alice][:year]
+#=> 2019
 puts vehicles[:blake][:make]
+#=> "Volkswagen"
 puts vehicles[:caleb][:model]
+#=> "Accord"
