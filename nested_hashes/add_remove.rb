@@ -24,3 +24,8 @@ puts 'After adding color in Zoe'
 pp vehicles
 print 'Color of Zoe-s vehicle: '
 puts vehicles.dig(:zoe, :color)
+
+# remove or delete
+vehicles.delete(:blake)
+puts 'After removing Blake'
+pp vehicles
