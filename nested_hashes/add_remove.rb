@@ -17,3 +17,10 @@ puts 'After adding data'
 pp vehicles
 print 'Year of Zoe: '
 puts vehicles.dig(:zoe, :year)
+
+# add more specificly
+vehicles[:zoe][:color] = 'red'
+puts 'After adding color in Zoe'
+pp vehicles
+print 'Color of Zoe-s vehicle: '
+puts vehicles.dig(:zoe, :color)
