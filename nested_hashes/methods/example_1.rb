@@ -11,3 +11,7 @@ pp vehicles_filtered
 vehicles_filtered_1 = vehicles.collect { |name, data| name if data[:year] >= 2020 }
 print 'Names: '
 pp vehicles_filtered_1
+
+# collect and map have the same functionality.
+# Both of these methods use the return value of each iteration,
+# so when the if statement is false, it will return a nil value.
