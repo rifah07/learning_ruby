@@ -20,3 +20,8 @@ vehicles_filtered_2 = vehicles.collect { |name, data| name if data[:year] >= 202
 print 'After using compact: '
 pp vehicles_filtered_2
 # compact method returns an array (or hash) without nil values
+
+#  there is a single method can do this
+vehicles_filtered_3 = vehicles.filter_map { |name, data| name if data[:year] >= 2020 }
+print 'Using filtered_map method: '
+pp vehicles_filtered_3
