@@ -15,3 +15,8 @@ pp vehicles_filtered_1
 # collect and map have the same functionality.
 # Both of these methods use the return value of each iteration,
 # so when the if statement is false, it will return a nil value.
+
+vehicles_filtered_2 = vehicles.collect { |name, data| name if data[:year] >= 2020 }.compact
+print 'After using compact: '
+pp vehicles_filtered_2
+# compact method returns an array (or hash) without nil values
