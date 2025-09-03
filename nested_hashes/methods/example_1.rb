@@ -7,3 +7,7 @@ vehicles = {
 vehicles_filtered = vehicles.select { |name, data| data[:year] >= 2020 }
 
 pp vehicles_filtered
+
+vehicles_filtered_1 = vehicles.collect { |name, data| name if data[:year] >= 2020 }
+print 'Names: '
+pp vehicles_filtered_1
