@@ -10,3 +10,9 @@ end
 
 # create an object of the class
 arthur = GoodHorse.new
+
+=begin
+Principle of combining data and the operations relevant to that data encapsulation.
+Encapsulation is about bundling state (data) and behavior (operations) to form an object.
+-The Launch School E-Book
+=end
