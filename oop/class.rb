@@ -12,6 +12,13 @@ end
 arthur = GoodHorse.new
 
 =begin
+If our program keeps track of data about entities and performs operations on that data,
+it makes sense to combine the data and the functionality into a single entity.
+That's what object-oriented programming is all about.
+-The Launch School E-Book
+=end
+
+=begin
 Principle of combining data and the operations relevant to that data encapsulation.
 Encapsulation is about bundling state (data) and behavior (operations) to form an object.
 -The Launch School E-Book
