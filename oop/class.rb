@@ -23,3 +23,13 @@ Principle of combining data and the operations relevant to that data encapsulati
 Encapsulation is about bundling state (data) and behavior (operations) to form an object.
 -The Launch School E-Book
 =end
+
+=begin
+In most OOP languages, encapsulation has a broader purpose.
+It also refers to restricting access to the state and certain behaviors;
+an object only exposes the data and behaviors that other parts of the application need to work.
+In other words, objects expose a public interface for interacting with other objects and
+keep their implementation details hidden.
+Thus, other objects can't change the data of an object without going through the proper interface.
+- The Launch School E-Book
+=end
