@@ -47,4 +47,15 @@ a clear interface, you reduce the chance of accidentally misusing or corrupting 
 which benefits you as the developer in the long run.
 =end
 
+=begin
+Imagine a video game where users manage a farm, and you’ve defined a Plant class.
+What are some possible subclasses of Plant? What kinds of behaviors might the Plant class define?
+
+=> "Mango Plant" and "Rose Plant" can be good example as subclasses.
+That’s a great example of how subclasses can represent more detailed versions of a general class.
+For behaviors, think about actions or things a plant can do, such as grow,
+photosynthesize, or bloom. These behaviors capture what a plant does,
+which fits well with what a class should define.
+=end
+
 
