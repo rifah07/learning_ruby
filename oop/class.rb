@@ -58,4 +58,6 @@ photosynthesize, or bloom. These behaviors capture what a plant does,
 which fits well with what a class should define.
 =end
 
+# Note:
+# There are a few things that are not objects in Ruby: methods, blocks, and variables are three that stand out.
 
