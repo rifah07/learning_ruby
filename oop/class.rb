@@ -33,3 +33,18 @@ keep their implementation details hidden.
 Thus, other objects can't change the data of an object without going through the proper interface.
 - The Launch School E-Book
 =end
+
+# Q/A
+=begin
+If we're the only one using our classes, why would we still use encapsulation?
+Does it really make sense to "hide" data from ourselves?
+
+=> Yes, it still makes sense to use encapsulation even if you're the only one
+using your classes. Encapsulation helps keep your code organized and protects
+your data from unintended changes, making it easier to maintain and debug.
+By hiding the internal details and exposing only what's necessary through
+a clear interface, you reduce the chance of accidentally misusing or corrupting the data,
+which benefits you as the developer in the long run.
+=end
+
+
