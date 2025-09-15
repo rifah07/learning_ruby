@@ -138,6 +138,9 @@ Inheritance lets one class **extend or specialize** another class.
     mango.bloom # Defined in MangoPlant
 ---
 
+
+---
+
 ## Q & A
 
 ### Q: If we're the only one using our classes, why would we still use encapsulation?
@@ -163,4 +166,15 @@ Behavior examples include growing, photosynthesizing, and blooming—these captu
 - There are a few things that are **not objects** in Ruby:  
   methods, blocks, and variables are three that stand out.
 
+---
+
+## Keep the Fire Burning 🔥
+
+Remember, mastering Ruby and object-oriented programming is a journey, not a race. Every step you take, every bug you fix, and every line of code you write is a victory that builds your skills stronger and sharper. Embrace challenges as opportunities to grow and keep your curiosity alive.
+
+The magic happens when you persist — push through confusing moments, celebrate your wins, and never stop learning. You have the power to create amazing software and bring your ideas to life. Stay passionate, stay driven, and let your code shine brighter with every keystroke!
+
+**Keep coding, keep growing, and keep that fire burning — the best is yet to come!** 🚀🔥
+
+Happy coding! 💻✨
 ---
