@@ -34,11 +34,11 @@ You can think of classes as basic outlines of what an object should be made of a
 
 Define class:  
 
-class GoodHorse  
-end
+    class GoodHorse  
+    end
 
-Create an object of the class:  
-arthur = GoodHorse.new
+    Create an object of the class:  
+    arthur = GoodHorse.new
 
 
 ---
@@ -54,23 +54,62 @@ Example with attributes and behaviors:
     class GoodHorse  
     attr_accessor :name, :color  
     
-    def initialize(name, color)  
-    @name = name  
-    @color = color  
-    end  
-     
-    def run  
-    puts "#{name} is running fast!"  
-    end  
-    
-    def eat(food)  
-    puts "#{name} is eating #{food}."   
-    end  
+        def initialize(name, color)  
+            @name = name  
+            @color = color  
+        end  
+         
+        def run  
+            puts "#{name} is running fast!"  
+        end  
+        
+        def eat(food)  
+            puts "#{name} is eating #{food}."   
+        end  
     end  
     
     arthur = GoodHorse.new("Arthur", "brown")
     arthur.run
     arthur.eat("hay")
+
+
+### Why Encapsulation Matters
+
+Encapsulation means keeping an object's **internal state private** and exposing only what is necessary to the outside world through **public methods** (the interface). This:
+
+- Protects data integrity
+- Simplifies interaction
+- Makes code easier to maintain
+- Helps debugging
+
+Example of encapsulation:
+
+    class BankAccount
+        def initialize(balance)
+            @balance = balance
+        end
+        
+        def deposit(amount)
+            @balance += amount if amount > 0
+        end
+        
+        def withdraw(amount)
+            if amount <= @balance && amount > 0
+                @balance -= amount
+            else
+                puts "Invalid withdrawal amount"
+            end
+        end
+        
+        def balance
+            @balance
+        end
+    end
+    
+    account = BankAccount.new(1000)
+    account.deposit(500)
+    puts account.balance # 1500
+    account.withdraw(2000) # Invalid withdrawal amount
 
 ---
 
