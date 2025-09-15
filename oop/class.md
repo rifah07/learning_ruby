@@ -43,6 +43,37 @@ arthur = GoodHorse.new
 
 ---
 
+## Expanded Examples and Concepts
+
+### What Is a Class?
+
+A **class** in Ruby is like a blueprint or template. It defines the **attributes** (data or state) and **behaviors** (methods or actions) that objects created from the class will have.
+
+Example with attributes and behaviors:
+
+    class GoodHorse  
+    attr_accessor :name, :color  
+    
+    def initialize(name, color)  
+    @name = name  
+    @color = color  
+    end  
+     
+    def run  
+    puts "#{name} is running fast!"  
+    end  
+    
+    def eat(food)  
+    puts "#{name} is eating #{food}."   
+    end  
+    end  
+    
+    arthur = GoodHorse.new("Arthur", "brown")
+    arthur.run
+    arthur.eat("hay")
+
+---
+
 ## Q & A
 
 ### Q: If we're the only one using our classes, why would we still use encapsulation?
