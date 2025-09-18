@@ -171,6 +171,40 @@ Polymorphism in Ruby means different objects can respond to the same method call
     Woof!
     Meow!
 
+
+Here, both `Dog` and `Cat` respond to the `speak` method but each provides its own behavior.
+
+### Example: Duck Typing Polymorphism
+
+    class Duck
+        def quack
+            puts "Quack quack!"
+        end
+    end
+    
+    class Person
+        def quack
+            puts "The person imitates a duck!"
+        end
+    end
+    
+    def make_quack(animal)
+        animal.quack
+    end
+    
+    make_quack(Duck.new) # Quack quack!
+    make_quack(Person.new) # The person imitates a duck!
+
+
+In Ruby, the method doesn’t care about an object’s class, only that it has the required method—this is called duck typing[web:65][web:66].
+
+---
+
+**Summary:**  
+Polymorphism lets you use a common interface to work with different types of objects, keeping your code DRY, extensible, and powerful.
+
+---
+
 ---
 
 ## Q & A
