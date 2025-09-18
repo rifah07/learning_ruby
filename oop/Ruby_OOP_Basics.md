@@ -138,6 +138,38 @@ Inheritance lets one class **extend or specialize** another class.
     mango.bloom # Defined in MangoPlant
 ---
 
+---
+
+## Polymorphism
+
+Polymorphism in Ruby means different objects can respond to the same method call in their own unique way, even if they’re from different classes. This makes your code flexible and easier to extend or maintain[web:61][web:62][web:64][web:66].
+
+### Example: Inheritance-Based Polymorphism
+
+    class Animal
+        def speak
+            puts "Some generic sound"
+        end
+    end
+    
+    class Dog < Animal
+        def speak
+            puts "Woof!"
+        end
+    end
+    
+    class Cat < Animal
+        def speak
+            puts "Meow!"
+        end
+    end
+    
+    animals = [Dog.new, Cat.new]
+    animals.each { |animal| animal.speak }
+    
+    Output:
+    Woof!
+    Meow!
 
 ---
 
