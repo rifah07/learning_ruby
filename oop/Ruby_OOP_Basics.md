@@ -254,6 +254,13 @@ Modules can also act as **namespaces** to organize related classes and constants
     end
     
     puts MathTools::Circle.area(2) # Output: 12.56636
+
+### Summary
+
+- **Modules** allow code reuse and organization without “is-a” relationships.
+- Use `include` (to add as instance methods) or `extend` (as class methods) to share module code with classes.
+- Good for “mixing in” abilities or grouping shared utility logic[web:74][web:77].
+
 ---
 
 ## Q & A
