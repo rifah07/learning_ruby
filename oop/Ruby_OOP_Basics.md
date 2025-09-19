@@ -207,6 +207,55 @@ Polymorphism lets you use a common interface to work with different types of obj
 
 ---
 
+## Module
+
+A **module** in Ruby is a collection of methods, constants, and sometimes classes, designed for sharing functionality and for namespacing code. Unlike classes, **modules cannot be instantiated**—that is, you can't create an object directly from a module, nor do modules have the `new` method[web:73][web:74][web:77].
+
+### Why use Modules?
+- To group related methods and constants together, making your code organized.
+- To **share code (mixins)** among multiple classes without using inheritance.
+- To provide **namespaces** to avoid naming conflicts in larger programs.
+
+### Example: Defining and Including a Module
+
+    module Greetings
+        def say_hello
+            puts "Hello!"
+        end
+    
+        def say_bye
+            puts "Goodbye!"
+        end
+    end
+    
+    class FriendlyPerson
+        include Greetings
+    end
+    
+    person = FriendlyPerson.new
+    person.say_hello # Output: Hello!
+    person.say_bye # Output: Goodbye!
+
+
+In this example, the `Greetings` module is included in the `FriendlyPerson` class, giving all `FriendlyPerson` instances access to the module’s methods.
+
+### Namespacing with Modules
+
+Modules can also act as **namespaces** to organize related classes and constants, avoiding conflicts:
+
+    module MathTools
+        PI = 3.14159
+        
+        class Circle
+            def self.area(radius)
+                PI * radius * radius
+            end
+        end
+    end
+    
+    puts MathTools::Circle.area(2) # Output: 12.56636
+---
+
 ## Q & A
 
 ### Q: If we're the only one using our classes, why would we still use encapsulation?
