@@ -32,3 +32,6 @@ puts GoodDog.ancestors
 Ruby has a distinct lookup path that it follows each time a method is called.
 We used our program from above to see what the method lookup path is for our GoodDog class.
 =end
+
+puts "-------HumanBeing Ancsetors--------"
+puts HumanBeing.ancestors
