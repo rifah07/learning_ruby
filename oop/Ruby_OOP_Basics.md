@@ -73,6 +73,9 @@ Example with attributes and behaviors:
     arthur.eat("hay")
 
 
+### The entire workflow of creating a new object or instance from a class is called instantiation
+-The Launch School
+
 ### Why Encapsulation Matters
 
 Encapsulation means keeping an object's **internal state private** and exposing only what is necessary to the outside world through **public methods** (the interface). This:
