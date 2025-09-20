@@ -22,3 +22,8 @@ toma.speak("Hello")
 This is possible through "mixing in" the module Speak.
 It's as if we copy-pasted the speak method into the GoodDog and HumanBeing classes.
 =end
+
+# We can use the ancestors method on any class to find out the method lookup chain.
+
+puts "-------GoodDog Ancsetors----------"
+puts GoodDog.ancestors
