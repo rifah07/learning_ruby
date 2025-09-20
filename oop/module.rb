@@ -27,3 +27,8 @@ It's as if we copy-pasted the speak method into the GoodDog and HumanBeing class
 
 puts "-------GoodDog Ancsetors----------"
 puts GoodDog.ancestors
+
+=begin
+Ruby has a distinct lookup path that it follows each time a method is called.
+We used our program from above to see what the method lookup path is for our GoodDog class.
+=end
