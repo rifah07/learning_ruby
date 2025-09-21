@@ -1,4 +1,13 @@
-module Speak
+=begin
+A module allows us to group reusable code into one place.
+We use modules in our classes by using the include method invocation,
+followed by the module name. Modules are also used as a namespace.
+  - The Launch School E-Book
+=end
+
+
+
+  module Speak
   def speak(sound)
     puts sound
   end
