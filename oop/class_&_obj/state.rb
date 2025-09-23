@@ -9,8 +9,8 @@ Instance variables keep track of state, and instance methods expose behavior for
 
 class Document
   def initialize(name, content)
-    @name = name
-    @content = content
+    @name = name #instance variable because '@'
+    @content = content #instance variable because '@'
     puts "This object was initialized"
   end
 end
@@ -19,3 +19,4 @@ pdf = Document.new("John", "Hello World")
 # The initialize method gets called every time you create a new object.
 # Itr is an instance (special) method special method that builds the object when a new object is instantiated.
 # It gets triggered by the new class method.
+# Here @name, @content are instance variables
