@@ -20,6 +20,7 @@ pdf = Document.new("John", "Hello World")
 # Itr is an instance (special) method special method that builds the object when a new object is instantiated.
 # It gets triggered by the new class method.
 # Here @name, @content are instance variables
+# Instance variables are responsible for keeping track of information about the state of an object
 
 =begin
 Instance variable according to The Launch School:
