@@ -61,3 +61,28 @@ end
 
 tommy = Dog.new
 puts tommy.name = "Tommy"
+
+# USIMG GETTER AND SETTER IS NECESSARY BUT FOR ACTUAL APPLICATION it will make the program too large
+# So Ruby has a built-in way to automatically create
+# these getter and setter methods for us, using the attr_accessor method.
+
+# Now let's see the above GoodDog class again with attr_accessor
+
+class GoodDog_1
+  attr_accessor :name # Ruby has a built-in way to automatically create these
+                      # getter and setter methods for us, using the attr_accessor method.
+
+  def initialize(name)
+    @name = name
+  end
+
+  def speak
+    "#{@name} speaks Arf!"
+  end
+end
+
+puts "This is another class"
+alen = GoodDog_1.new("Alen")
+puts alen.name
+alen.name = "Polen"
+puts alen.name
