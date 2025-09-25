@@ -48,3 +48,16 @@ puts sparky.name
 puts fido.speak
 puts fido.name
 # state is different, behaviour is same
+
+# Setter methods always return the value that is passed in as an argument,
+# regardless of what happens inside the method. If the setter tries to return
+# something other than the argument's value, it just ignores that attempt.
+class Dog
+  def name=(n)
+    @name = n
+    # Lillian
+  end
+end
+
+tommy = Dog.new
+puts tommy.name = "Tommy"
