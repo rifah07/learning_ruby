@@ -1,5 +1,5 @@
 class MyCar
-  attr_accessor :year, :color, :model
+  #attr_accessor :year, :color, :model
 
   def initialize(year, color, model)
     @year = year
@@ -8,7 +8,7 @@ class MyCar
     @current_speed = 0
   end
 
-  def increase_speed(number)
+  def speed_up(number)
     @current_speed += number
     puts "Speed increase: #{number}"
   end
@@ -28,11 +28,11 @@ class MyCar
 end
 
 rr = MyCar.new(2000, 'Yellow', 'Rolls Royce')
-rr.increase_speed(17)
+rr.speed_up(17)
 rr.current_speed
 rr.brake(5)
 rr.current_speed
-rr.increase_speed(10)
+rr.speed_up(10)
 rr.current_speed
 rr.shut_down
 rr.current_speed
