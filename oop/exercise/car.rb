@@ -1,5 +1,8 @@
 class MyCar
-  #attr_accessor :year, :color, :model
+  # Add an accessor method to your MyCar class to change and view the color of your car.
+  # Then add an accessor method that allows you to view, but not modify, the year of your car.
+  attr_accessor :color
+  attr_reader :year
 
   def initialize(year, color, model)
     @year = year
@@ -36,3 +39,8 @@ rr.speed_up(10)
 rr.current_speed
 rr.shut_down
 rr.current_speed
+
+puts rr.color
+rr.color = "Black"
+puts rr.color
+puts rr.year
