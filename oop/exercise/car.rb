@@ -11,6 +11,15 @@ class MyCar
     @current_speed = 0
   end
 
+  # You want to create a nice interface that allows you to accurately describe the
+  # action you want your program to perform.
+  # Create a method called spray_paint that can be called on an object and will modify the color of the car.
+
+  def spray_paint(color)
+    self.color = color
+    puts "New #{color} paint job looks great!"
+  end
+
   def speed_up(number)
     @current_speed += number
     puts "Speed increase: #{number}"
@@ -44,3 +53,5 @@ puts rr.color
 rr.color = "Black"
 puts rr.color
 puts rr.year
+
+rr.spray_paint("Red")
