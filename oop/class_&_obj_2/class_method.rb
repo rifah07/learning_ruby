@@ -63,4 +63,7 @@ irb :002 > x = 5
 => 5
 irb :003 > "The #{arr} array doesn't include #{x}."
 => The [1, 2, 3] array doesn't include 5.
+
+In summary, the to_s method is called automatically on
+the object when we use it with puts or when used with string interpolation.
 =end
