@@ -36,3 +36,10 @@ Class variables allow all instances to share and update the same piece of data,
 keeping a count that reflects the total number of objects created from the class.
 This way, you have a single source of truth for this count,
 =end
+
+puts dog1
+
+=begin
+puts dog1 is equivalent to puts dog1.to_s
+By default, the to_s method returns the name of the object's class and an encoding of the object id.
+=end
