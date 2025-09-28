@@ -42,4 +42,6 @@ puts dog1
 =begin
 puts dog1 is equivalent to puts dog1.to_s
 By default, the to_s method returns the name of the object's class and an encoding of the object id.
+Note: puts method calls to_s for any argument that is not an array. For an array, it writes on separate
+lines the result of calling to_s on each element of the array.
 =end
