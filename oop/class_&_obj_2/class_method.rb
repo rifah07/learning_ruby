@@ -50,4 +50,5 @@ lines the result of calling to_s on each element of the array.
 There's another method called p that's very similar to puts, except it doesn't call to_s on its argument;
 t calls another built-in Ruby instance method called inspect. The inspect method is very
 helpful for debugging purposes, so we don't want to override it.
+p sparky is equivalent to puts sparky.inspect.
 =end
