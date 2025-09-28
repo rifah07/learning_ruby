@@ -30,3 +30,9 @@ dog1 = GoodDog.new
 dog2 = GoodDog.new
 
 puts GoodDog.total_number_of_dogs   # => 2
+
+=begin
+Class variables allow all instances to share and update the same piece of data,
+keeping a count that reflects the total number of objects created from the class.
+This way, you have a single source of truth for this count,
+=end
