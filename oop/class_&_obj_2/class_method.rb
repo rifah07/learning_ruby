@@ -52,3 +52,15 @@ t calls another built-in Ruby instance method called inspect. The inspect method
 helpful for debugging purposes, so we don't want to override it.
 p sparky is equivalent to puts sparky.inspect.
 =end
+
+=begin
+Besides being called automatically when using puts, another important
+attribute of the to_s method is that it's also automatically called in string interpolation.
+Example:
+irb :001 > arr = [1, 2, 3]
+=> [1, 2, 3]
+irb :002 > x = 5
+=> 5
+irb :003 > "The #{arr} array doesn't include #{x}."
+=> The [1, 2, 3] array doesn't include 5.
+=end
