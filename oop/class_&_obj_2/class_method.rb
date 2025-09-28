@@ -45,3 +45,9 @@ By default, the to_s method returns the name of the object's class and an encodi
 Note: puts method calls to_s for any argument that is not an array. For an array, it writes on separate
 lines the result of calling to_s on each element of the array.
 =end
+
+=begin
+There's another method called p that's very similar to puts, except it doesn't call to_s on its argument;
+t calls another built-in Ruby instance method called inspect. The inspect method is very
+helpful for debugging purposes, so we don't want to override it.
+=end
