@@ -25,3 +25,20 @@
 # 5. Limitation: A custom `to_s` of a class only applies to its objects.
 #    If you print an attribute of that object, the attribute’s class decides
 #    what its `to_s` looks like (not your custom class).
+#
+# -------------------------------------------------------------------
+# PRACTICAL EXAMPLES
+# -------------------------------------------------------------------
+
+# Example 1: BAD - Returning an Integer (not allowed for to_s)
+
+class Foo
+  def to_s
+    37   # This is not a String
+  end
+end
+
+foo = Foo.new
+puts "Example 1: "
+puts foo
+puts "foo is #{foo}"
