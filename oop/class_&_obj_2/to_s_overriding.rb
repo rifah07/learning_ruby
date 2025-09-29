@@ -9,3 +9,11 @@
 #    puts obj   # => "#<Object:0x0000000100abcd>"
 #
 #    It shows the object's class name and its unique object ID (memory address representation).
+#
+# 2. Overriding `to_s` means writing your own version of the `to_s` method
+#    inside a class to control how objects of that class are represented as strings.
+#
+# 3. IMPORTANT RULE: `to_s` **must always return a String**.
+#    - If you return ANYTHING else (Integer, Array, Hash, etc.),
+#      Ruby will try the inheritance chain (back to Object#to_s).
+#    - This means your custom string representation will be ignored.
