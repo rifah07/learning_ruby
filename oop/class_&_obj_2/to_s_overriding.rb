@@ -1,5 +1,25 @@
-# THEORY ABOUT OVERRIDING to_s
+# Memory Trick for Overriding to_s
 #
+# Mnemonic:
+# "to_s Must Sing, Not Show"
+#
+# Explanation:
+# The name `to_s` literally means "to string". It reminds you that
+# this method should always *sing* (return a string).
+# If it doesn't sing (return a string), Ruby ignores it and shows
+# (falls back to Object#to_s default printing).
+#
+# Analogy:
+# Imagine Ruby asks your object, "Please sing me a song (a string) so I can
+# share it with others (print or interpolate)."
+# If your object hums a number or shows a painting (returns an integer or hash),
+# Ruby says, "That's not a song! I'll ask the parent to sing instead."
+#
+# So always program your `to_s` method to sing a string song!
+#
+# This way, wherever Ruby expects a string representation--puts, "#{obj}", etc.--your object will shine.
+
+# THEORY ABOUT OVERRIDING to_s
 # 1. By default, every Ruby object inherits a `to_s` method from Object class.
 #    Example: If you create a new object and try to print it with puts,
 #    Ruby calls `to_s` internally.
