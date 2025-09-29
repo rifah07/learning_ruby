@@ -40,5 +40,18 @@ end
 
 foo = Foo.new
 puts "Example 1: "
-puts foo
+puts foo # Ruby ignores our to_s (since 37 is not a string) => prints Object#to_s result: #<Foo:0x...>
 puts "foo is #{foo}"
+puts "-" * 50
+
+# Example 2: GOOD - Returning a String
+class FooFixed
+  def to_s
+    "37"
+  end
+end
+
+foo_fixed = FooFixed.new
+puts "Example 2: "
+puts foo_fixed # => "37"
+puts "foo_fixed is #{foo_fixed}" # => "foo_fixed is 37"
