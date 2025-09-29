@@ -17,3 +17,11 @@
 #    - If you return ANYTHING else (Integer, Array, Hash, etc.),
 #      Ruby will try the inheritance chain (back to Object#to_s).
 #    - This means your custom string representation will be ignored.
+#
+# 4. Implicit calls to `to_s`:
+#    - puts object   # calls object.to_s
+#    - "Hello #{object}"   # string interpolation also calls object.to_s
+#
+# 5. Limitation: A custom `to_s` of a class only applies to its objects.
+#    If you print an attribute of that object, the attribute’s class decides
+#    what its `to_s` looks like (not your custom class).
