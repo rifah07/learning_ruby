@@ -66,3 +66,56 @@ p sparky.what_is_self
 sparky.change_info('Rex', '15 inches', '12 lbs')
 puts sparky.info
 # "Rex weighs 12 lbs and is 15 inches tall."
+
+# ========================================
+# SELF OUTSIDE INSTANCE METHODS
+# ========================================
+# When used in the class body but NOT inside an instance method,
+# `self` refers to the CLASS itself.
+#
+# Example: defining a class method with `self.method_name`.
+class MyAwesomeClass
+  def self.this_is_a_class_method
+    "I'm a class method!"
+  end
+end
+
+puts MyAwesomeClass.this_is_a_class_method
+# => "I'm a class method!"
+
+# ----------------------------------------
+# WHY USE `self` FOR CLASS METHODS?
+# ----------------------------------------
+# `def self.method` is just shorthand for `def ClassName.method`.
+# Example:
+class GoodDog
+  @@number_of_dogs = 0
+
+  def initialize
+    @@number_of_dogs += 1
+  end
+
+  # This is a class method
+  def self.total_number_of_dogs
+    @@number_of_dogs
+  end
+end
+
+dog1 = GoodDog.new('Max','14 inches','20 lbs')
+dog2 = GoodDog.new('Buddy','16 inches','25 lbs')
+
+puts GoodDog.total_number_of_dogs
+# => 2 (Because we created 2 objects)
+
+# ========================================
+# SUMMARY OF `self`
+# ========================================
+# 1. Inside an instance method → `self` is the CURRENT OBJECT (e.g. sparky).
+#    - Useful when calling setter methods or chaining object methods.
+#    - `self.name=` is like calling `sparky.name=` from outside.
+#
+# 2. Inside a class but OUTSIDE instance methods → `self` is the CLASS itself.
+#    - This is how you define class methods (methods you call on the class).
+#    - Example: `def self.method` == `def ClassName.method`.
+#
+# => `self` is context-dependent, and understanding it is key to mastering OOP in Ruby!
