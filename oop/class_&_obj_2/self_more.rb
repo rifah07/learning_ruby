@@ -27,3 +27,42 @@ class GoodDog
     self.height = h
     self.weight = w
   end
+
+  # ----------------------------------------
+  # INSTANCE METHOD WITH SELF
+  # ----------------------------------------
+  # `self` inside instance methods = the current calling object.
+  # Example: if `sparky` calls `change_info`,
+  #   then inside the method `self` is `sparky`.
+  def change_info(n, h, w)
+    self.name   = n
+    self.height = h
+    self.weight = w
+  end
+
+  # ----------------------------------------
+  # USING SELF TO CALL OTHER INSTANCE METHODS
+  # ----------------------------------------
+  def info
+    "#{self.name} weighs #{self.weight} and is #{self.height} tall."
+  end
+
+  # ----------------------------------------
+  # TESTING WHAT SELF IS
+  # ----------------------------------------
+  # Returns whatever the current `self` refers to.
+  # In an instance method, that's always the calling object.
+  def what_is_self
+    self
+  end
+end
+
+# Create object
+sparky = GoodDog.new('Sparky', '12 inches', '10 lbs')
+p sparky.what_is_self
+# Output is the `sparky` object because inside the method `self` refers to the instance.
+
+# Try calling change_info
+sparky.change_info('Rex', '15 inches', '12 lbs')
+puts sparky.info
+# "Rex weighs 12 lbs and is 15 inches tall."
