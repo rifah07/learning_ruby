@@ -68,3 +68,14 @@ puts sparky.info
 
 # Class method: called on the CLASS, not the object!
 puts "Dogs created: #{GoodDog.total_number_of_dogs}"
+
+# ==============================================
+# Table: How to define and call methods
+# ==============================================
+#
+# | Syntax                      | Type           | Who calls it?                 | Example usage                  |
+# |-----------------------------|----------------|-------------------------------|-------------------------------|
+# | def change_info             | Instance       | Objects of the class          | sparky.change_info(...)       |
+# | def self.total_number_of_dogs| Class         | The class itself              | GoodDog.total_number_of_dogs  |
+#
+# Key point: 'self.' before method name means a class method.
