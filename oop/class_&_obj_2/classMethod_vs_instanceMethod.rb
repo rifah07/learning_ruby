@@ -79,3 +79,32 @@ puts "Dogs created: #{GoodDog.total_number_of_dogs}"
 # | def self.total_number_of_dogs| Class         | The class itself              | GoodDog.total_number_of_dogs  |
 #
 # Key point: 'self.' before method name means a class method.
+#
+# ==============================================
+# Without 'self' in a setter, Ruby thinks it's a local variable!
+# ==============================================
+class DemoSetter
+  attr_accessor :name
+
+  def set_name_problem(name)
+    name = name # assigns parameter to local var, DOES NOT set @name!
+  end
+
+  def set_name_proper(name)
+    self.name = name # Uses setter to set @name
+  end
+end
+
+demo = DemoSetter.new
+demo.set_name_problem("Foo")
+puts demo.name # Prints nothing (nil)!
+demo.set_name_proper("Bar")
+puts demo.name # Prints "Bar"
+
+# ==============================================
+# In summary
+# ==============================================
+#  - Instance methods: def method_name           (use with objects)
+#  - Class methods:    def self.method_name      (use with class itself)
+#  - Inside instance methods, self = the object
+#  - Inside class methods, self = the class
