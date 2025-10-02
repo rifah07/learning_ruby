@@ -35,8 +35,8 @@ class MyCar
   end
 
   # Add a class method to your MyCar class that calculates the gas mileage (i.e. miles per gallon) of any car.
-  def self.gas_mileage(gallon_gas, miles)
-    puts "#{miles / gallon_gas} miles per gallon gas"
+  def self.gas_mileage(gallons, miles)
+    puts "#{miles / gallons} miles per gallon gas"
   end
 
   def shut_down
@@ -61,3 +61,5 @@ puts rr.color
 puts rr.year
 
 rr.spray_paint("Red")
+
+MyCar.gas_mileage(70, 140)
