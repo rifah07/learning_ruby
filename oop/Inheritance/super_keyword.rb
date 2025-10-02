@@ -21,3 +21,10 @@ puts animal.speak
 
 kitty = Cat.new
 puts kitty.speak
+
+## Q/A
+#
+# Why can't we just invoke speak directly within the GoodDog class's speak method
+# to reach the superclass version? What would happen if we did?
+
+# Because it then creates an infinite recursion, as it will keep calling itself.
