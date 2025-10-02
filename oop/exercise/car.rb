@@ -33,6 +33,12 @@ class MyCar
   def current_speed
     puts "Your current speed is #{@current_speed} mph"
   end
+
+  # Add a class method to your MyCar class that calculates the gas mileage (i.e. miles per gallon) of any car.
+  def self.gas_mileage(gallon_gas, miles)
+    puts "#{miles / gallon_gas} miles per gallon gas"
+  end
+
   def shut_down
     @current_speed = 0
     puts "Now let's park!"
