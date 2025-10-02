@@ -39,6 +39,11 @@ class MyCar
     puts "#{miles / gallons} miles per gallon gas"
   end
 
+  # Override the to_s method to create a user friendly print out of your object.
+  def to_s
+    "My car is a #{color}, #{year}, #{@model}"
+  end
+
   def shut_down
     @current_speed = 0
     puts "Now let's park!"
@@ -63,3 +68,4 @@ puts rr.year
 rr.spray_paint("Red")
 
 MyCar.gas_mileage(70, 140)
+puts rr
