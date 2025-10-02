@@ -9,13 +9,22 @@ class Animal
   end
 end
 
-class Cat < Animal #this is how we define a child/sub class from parent class
+class Cat < Animal #this is how we define a child/sub class from parent/super class
+  attr_accessor :name
+
+  def initialize(n)
+    self.name = n
+  end
+
+  def Speak
+    "#{self.name} says batman!"
+  end
 end
 
 class Hen < Animal
 end
 
-kitty = Cat.new
+kitty = Cat.new("Kitty")
 puts kitty.Speak
 
 timmi = Hen.new
