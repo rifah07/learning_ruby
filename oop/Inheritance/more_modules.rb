@@ -27,3 +27,23 @@ tommy = Mammal::Dog.new
 tommy.speak("Arf!")
 kitty = Mammal::Cat.new
 kitty.say_name("Kitty")
+
+# -----------------------------
+# 2. MODULES AS CONTAINERS
+# -----------------------------
+# Modules can also hold methods that don’t fit inside any class.
+# These are called "module methods" and can be used directly without creating objects.
+
+module Temperature_Converter
+  def self.fahrenheit_to_celsius(num)
+    (num - 32) * 5 / 9
+  end
+end
+
+# You can call the module method directly from the module:
+value = Temperature_Converter.fahrenheit_to_celsius(23)
+puts value
+
+# Or like this (less common way):
+value = Temperature_Converter::fahrenheit_to_celsius(32)
+puts value
