@@ -18,6 +18,10 @@ class GoodCat
     self.age = a
   end
 
+  def public_disclosure
+    "#{self.name} in human years is #{human_years}"
+  end
+
   private
 
   def human_years
@@ -27,8 +31,12 @@ class GoodCat
 end
 
 kitty = GoodCat.new("Kitty", 4)
-kitty.human_years # private method 'human_years' called for an instance of GoodCat (NoMethodError)
+#kitty.human_years # private method 'human_years' called for an instance of GoodCat (NoMethodError)
 
 # We have made the human_years method private by placing it under the private method
 # private methods are only accessible from other methods in the class.
+=begin
+private methods are not accessible outside of the class definition at all,
+and are only accessible from inside the class when called without self(before Ruby 2.7).
+=end
 
