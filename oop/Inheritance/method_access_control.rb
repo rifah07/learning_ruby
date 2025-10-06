@@ -39,4 +39,3 @@ kitty = GoodCat.new("Kitty", 4)
 private methods are not accessible outside of the class definition at all,
 and are only accessible from inside the class when called without self(before Ruby 2.7).
 =end
-
