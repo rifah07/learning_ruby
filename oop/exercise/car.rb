@@ -1,3 +1,8 @@
+module Towable
+  def can_tow?(pounds)
+    pounds < 2000
+  end
+end
 class Vehicle
 
   @@number_of_vehicles = 0
@@ -61,6 +66,12 @@ class MyCar < Vehicle
     @current_speed = 0
     puts "Now let's park!"
   end
+end
+
+class MyTruck < Vehicle
+  include Towable
+
+  NUMBER_OF_DOORS = 2
 end
 
 rr = MyCar.new(2000, 'Yellow', 'Rolls Royce')
