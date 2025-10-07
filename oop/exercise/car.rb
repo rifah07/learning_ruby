@@ -1,4 +1,11 @@
-class MyCar
+class Vehicle
+  def self.gas_mileage(gallons, miles)
+    puts "#{miles / gallons} miles per gallon gas"
+  end
+end
+
+class MyCar < Vehicle
+  NUMBER_OF_DOORS = 4
   # Add an accessor method to your MyCar class to change and view the color of your car.
   # Then add an accessor method that allows you to view, but not modify, the year of your car.
   attr_accessor :color
@@ -34,10 +41,6 @@ class MyCar
     puts "Your current speed is #{@current_speed} mph"
   end
 
-  # Add a class method to your MyCar class that calculates the gas mileage (i.e. miles per gallon) of any car.
-  def self.gas_mileage(gallons, miles)
-    puts "#{miles / gallons} miles per gallon gas"
-  end
 
   # Override the to_s method to create a user friendly print out of your object.
   def to_s
