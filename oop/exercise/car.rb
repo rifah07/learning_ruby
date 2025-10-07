@@ -93,3 +93,12 @@ rr.spray_paint("Red")
 
 MyCar.gas_mileage(70, 140)
 puts rr
+
+puts "-----Vehicle Method Lookup-----"
+puts Vehicle.ancestors
+
+puts "-----MyCar Method Lookup-----"
+puts MyCar.ancestors
+
+puts "-----MyTruck Method Lookup-----"
+puts MyTruck.ancestors
