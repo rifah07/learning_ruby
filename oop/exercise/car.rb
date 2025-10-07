@@ -1,6 +1,16 @@
 class Vehicle
+
+  @@number_of_vehicles = 0
+
+  def self.number_of_vehicles
+    puts "Number of Vehicles: #{@@number_of_vehicles}"
+  end
   def self.gas_mileage(gallons, miles)
     puts "#{miles / gallons} miles per gallon gas"
+  end
+
+  def initialize
+    @@number_of_vehicles += 1
   end
 end
 
