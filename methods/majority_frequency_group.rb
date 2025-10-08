@@ -28,6 +28,16 @@ def majority_frequency_group(s)
   result_chart = majority_group.last.map(&:first)
   puts "result_chart = #{result_chart.inspect}"
 
+=begin
+  1. majority_group is a pair: [frequency, pairs_array]
+  Example: [3, [["a", 3], ["b", 3]]]
+  2. .last gives you the pairs array (second element):
+    majority_group.last → [["a", 3], ["b", 3]]
+  3. .map(&:first) is Ruby shorthand for extracting the first element of each
+      little pair (the character), instead of writing .map { |pair| pair.first }.
+    For [["a", 3], ["b", 3]], this gets ["a", "b"].
+=end
+
   # Step 8: Join characters to string
   final = result_chart.join
   puts "final = #{final.inspect}"
