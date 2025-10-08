@@ -19,6 +19,20 @@ def majority_frequency_group(s)
   # Step 5: Sort by group size (number of distinct chars) ascending
   sorted_by_size = sorted.sort_by {|k, arr| arr.size}
   puts "sorted_by_size = #{sorted_by_size.inspect}"
+
+  # Step 6: Select majority group (largest size, break ties with largest freq)
+  majority_group = sorted_by_size.last
+  puts "majority_group = #{majority_group.inspect}"
+
+  # Step 7: Extract chars from [char, freq] pairs
+  result_chart = majority_group.last.map(&:first)
+  puts "result_chart = #{result_chart.inspect}"
+
+  # Step 8: Join characters to string
+  final = result_chart.join
+  puts "final = #{final.inspect}"
+
+  final
 end
 
-majority_frequency_group("kitty")
+puts "Final Result = #{majority_frequency_group("kitty")}"
