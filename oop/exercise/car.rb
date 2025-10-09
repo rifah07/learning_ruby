@@ -4,7 +4,8 @@ module Towable
   end
 end
 class Vehicle
-
+  attr_accessor :color
+  attr_reader :year, :model
   @@number_of_vehicles = 0
 
   def self.number_of_vehicles
@@ -14,32 +15,12 @@ class Vehicle
     puts "#{miles / gallons} miles per gallon gas"
   end
 
-  def initialize
-    @@number_of_vehicles += 1
-  end
-end
-
-class MyCar < Vehicle
-  NUMBER_OF_DOORS = 4
-  # Add an accessor method to your MyCar class to change and view the color of your car.
-  # Then add an accessor method that allows you to view, but not modify, the year of your car.
-  attr_accessor :color
-  attr_reader :year
-
   def initialize(year, color, model)
     @year = year
     @color = color
     @model = model
     @current_speed = 0
-  end
-
-  # You want to create a nice interface that allows you to accurately describe the
-  # action you want your program to perform.
-  # Create a method called spray_paint that can be called on an object and will modify the color of the car.
-
-  def spray_paint(color)
-    self.color = color
-    puts "New #{color} paint job looks great!"
+    @@number_of_vehicles += 1
   end
 
   def speed_up(number)
@@ -56,10 +37,9 @@ class MyCar < Vehicle
     puts "Your current speed is #{@current_speed} mph"
   end
 
-
-  # Override the to_s method to create a user friendly print out of your object.
-  def to_s
-    "My car is a #{color}, #{year}, #{@model}"
+  def spray_paint(color)
+    self.color = color
+    puts "New #{color} paint job looks great!"
   end
 
   def shut_down
@@ -68,37 +48,39 @@ class MyCar < Vehicle
   end
 end
 
+class MyCar < Vehicle
+  NUMBER_OF_DOORS = 4
+
+  def to_s
+    "My car is a #{color}, #{year}, #{@model}"
+  end
+
+end
+
 class MyTruck < Vehicle
   include Towable
 
   NUMBER_OF_DOORS = 2
+
+  def to_s
+    "My truck  is a #{self.color}, #{self.year}, #{self.model}!"
+  end
+
 end
 
-rr = MyCar.new(2000, 'Yellow', 'Rolls Royce')
-rr.speed_up(17)
+rr = MyCar.new(1997, 'chevy lumina', 'white')
+rr.speed_up(20)
 rr.current_speed
-rr.brake(5)
+rr.speed_up(20)
 rr.current_speed
-rr.speed_up(10)
+rr.brake(20)
+rr.current_speed
+rr.brake(20)
 rr.current_speed
 rr.shut_down
-rr.current_speed
-
-puts rr.color
-rr.color = "Black"
-puts rr.color
-puts rr.year
-
-rr.spray_paint("Red")
-
-MyCar.gas_mileage(70, 140)
+MyCar.gas_mileage(13, 351)
+rr.spray_paint("red")
 puts rr
-
-puts "-----Vehicle Method Lookup-----"
-puts Vehicle.ancestors
-
-puts "-----MyCar Method Lookup-----"
 puts MyCar.ancestors
-
-puts "-----MyTruck Method Lookup-----"
 puts MyTruck.ancestors
+puts Vehicle.ancestors
