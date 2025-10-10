@@ -8,6 +8,9 @@ class Vehicle
   attr_reader :year, :model
   @@number_of_vehicles = 0
 
+  def age
+    "Your #{self.model} is #{self.years_old} years old"
+  end
   def self.number_of_vehicles
     puts "Number of Vehicles: #{@@number_of_vehicles}"
   end
@@ -46,6 +49,12 @@ class Vehicle
     @current_speed = 0
     puts "Now let's park!"
   end
+
+  private
+
+  def years_old
+    Time.now.year - self.year
+  end
 end
 
 class MyCar < Vehicle
@@ -78,6 +87,7 @@ rr.current_speed
 rr.brake(20)
 rr.current_speed
 rr.shut_down
+rr.age
 MyCar.gas_mileage(13, 351)
 rr.spray_paint("red")
 puts rr
