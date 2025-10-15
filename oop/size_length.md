@@ -41,3 +41,6 @@ puts arr.length # Outputs: 4
 
 For Ruby arrays, use either `size` or `length` to get the number of elements.  
 There is **no difference** in their output or performance.
+
+Ends here
+----
