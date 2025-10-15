@@ -26,3 +26,18 @@ Both `size` and `length` methods for Ruby arrays return the total number of elem
 In Rails, for collections that come from databases, there can be subtle behavioral differences, especially regarding lazy loading and database queries. For pure Ruby arrays, however, **no difference exists**.
 
 ---
+
+## Example Usage
+
+```ruby
+arr =  
+puts arr.size # Outputs: 4  
+puts arr.length # Outputs: 4  
+
+
+---
+
+## Conclusion
+
+For Ruby arrays, use either `size` or `length` to get the number of elements.  
+There is **no difference** in their output or performance.
