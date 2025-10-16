@@ -48,3 +48,12 @@ Example:
 require 'csv' # Standard library gem  
 require_relative 'lib/sort' # Your code  
 ```
+
+
+A good practice is to use `require_relative` for your internal files and `require` for external dependencies.
+
+---
+
+## Avoiding Naming Conflicts with Modules
+
+If two files define the same method or class names, the last one loaded will overwrite earlier definitions. To prevent this accidental overwrite, Ruby developers wrap their code in modules that act as namespaces.
