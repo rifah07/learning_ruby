@@ -38,3 +38,7 @@ require_relative 'sort/bubble_sort'
 require_relative 'sort/bogo_sort'
 require_relative 'sort/merge_sort'
 ```
+
+### Using `require`
+
+`require` is typically used for external libraries or gems and looks for files in Ruby's `$LOAD_PATH`.
