@@ -42,3 +42,9 @@ require_relative 'sort/merge_sort'
 ### Using `require`
 
 `require` is typically used for external libraries or gems and looks for files in Ruby's `$LOAD_PATH`.
+
+Example:  
+```
+require 'csv' # Standard library gem  
+require_relative 'lib/sort' # Your code  
+```
