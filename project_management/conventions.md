@@ -57,3 +57,21 @@ A good practice is to use `require_relative` for your internal files and `requir
 ## Avoiding Naming Conflicts with Modules
 
 If two files define the same method or class names, the last one loaded will overwrite earlier definitions. To prevent this accidental overwrite, Ruby developers wrap their code in modules that act as namespaces.
+
+Example:  
+```
+module AirTravel
+  class Flight
+    def announce
+      puts 'Boarding now!'
+    end
+  end
+end
+
+AirTravel::Flight.new.announce
+
+```
+### Modules help organize code and avoid naming conflicts.
+
+
+
