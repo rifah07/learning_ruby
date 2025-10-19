@@ -7,7 +7,7 @@ p Math::PI # => 3.141592653589793
 # What if you wanted to calculate what specific day July 4th occurred in 2008? You can use Ruby's built-in Time class.
 
 t = Time.new(2008, 7, 4)
-puts t.strftime("%A") # => "Friday"
+puts t.strftime('%A') # => "Friday"
 
 p t.monday?
 p t.tuesday?

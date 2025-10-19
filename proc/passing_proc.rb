@@ -6,7 +6,7 @@ def take_proc(proc)
   end
 end
 
-proc = Proc.new do |number|
+proc = proc do |number|
   puts "#{number}. Proc being called in the method!"
 end
 

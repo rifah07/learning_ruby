@@ -1,7 +1,7 @@
 animals = [
-  ['mammals', ['dog', 'cat', 'elephant', 'whale']],
-  ['birds', ['eagle', 'sparrow', 'penguin']],
-  ['reptiles', ['snake', 'lizard', ['turtle', 'tortoise']]]
+  ['mammals', %w[dog cat elephant whale]],
+  ['birds', %w[eagle sparrow penguin]],
+  ['reptiles', ['snake', 'lizard', %w[turtle tortoise]]]
 ]
 
 p animals
@@ -18,7 +18,7 @@ animals.each do |category, names|
 end
 
 
-#another example
+# another example
 test_scores = [[97, 76, 79, 93], [79, 84, 76, 79], [88, 67, 64, 76], [94, 85, 97, 81]]
 puts "Test Scores: #{test_scores}"
 #=> [[97, 76, 79, 93], [79, 84, 76, 79], [88, 67, 64, 76], [94, 85, 97, 81]]

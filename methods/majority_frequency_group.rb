@@ -9,7 +9,7 @@ def majority_frequency_group(s)
   puts "freq = #{freq.inspect}"
 
   # Step 3: Group [char, freq] pairs by freq value
-  grouped = freq.group_by {|char, count| count}
+  grouped = freq.group_by { |_char, count| count }
   puts "grouped = #{grouped.inspect}"
 
   # Step 4: Sort groups by freq ascending
@@ -17,7 +17,7 @@ def majority_frequency_group(s)
   puts "sorted = #{sorted.inspect}"
 
   # Step 5: Sort by group size (number of distinct chars) ascending
-  sorted_by_size = sorted.sort_by {|k, arr| arr.size}
+  sorted_by_size = sorted.sort_by { |_k, arr| arr.size }
   puts "sorted_by_size = #{sorted_by_size.inspect}"
 
   # Step 6: Select majority group (largest size, break ties with largest freq)
@@ -28,15 +28,13 @@ def majority_frequency_group(s)
   result_chart = majority_group.last.map(&:first)
   puts "result_chart = #{result_chart.inspect}"
 
-=begin
-  1. majority_group is a pair: [frequency, pairs_array]
-  Example: [3, [["a", 3], ["b", 3]]]
-  2. .last gives you the pairs array (second element):
-    majority_group.last → [["a", 3], ["b", 3]]
-  3. .map(&:first) is Ruby shorthand for extracting the first element of each
-      little pair (the character), instead of writing .map { |pair| pair.first }.
-    For [["a", 3], ["b", 3]], this gets ["a", "b"].
-=end
+  #   1. majority_group is a pair: [frequency, pairs_array]
+  #   Example: [3, [["a", 3], ["b", 3]]]
+  #   2. .last gives you the pairs array (second element):
+  #     majority_group.last → [["a", 3], ["b", 3]]
+  #   3. .map(&:first) is Ruby shorthand for extracting the first element of each
+  #       little pair (the character), instead of writing .map { |pair| pair.first }.
+  #     For [["a", 3], ["b", 3]], this gets ["a", "b"].
 
   # Step 8: Join characters to string
   final = result_chart.join
@@ -45,4 +43,4 @@ def majority_frequency_group(s)
   final
 end
 
-puts "Final Result = #{majority_frequency_group("kitty")}"
+puts "Final Result = #{majority_frequency_group('kitty')}"

@@ -22,7 +22,7 @@ end
 def find_low_inventory(inventory_list)
   # use #select to iterate through each item of the inventory_list (a hash)
   # hint: the number should start with 1
-  low_inventory = inventory_list.select { |item, quantity| quantity < 4 }
+  inventory_list.select { |_item, quantity| quantity < 4 }
 end
 
 def find_absolute_values(numbers)
@@ -34,15 +34,14 @@ end
 def find_low_inventory(inventory_list)
   # use #select to iterate through each item of the inventory_list (a hash)
   # return a hash of items with values less than 4
-  low_inventory = inventory_list.select { |item, quantity| quantity < 4 }
+  inventory_list.select { |_item, quantity| quantity < 4 }
 end
 
 def find_word_lengths(word_list)
   # use #reduce to iterate through each item of the word_list (an array)
   # return a hash with each word as the key and its length as the value
-  word_list.reduce({}) do |acc, word|
+  word_list.each_with_object({}) do |word, acc|
     acc[word] = word.length
-    acc
   end
   # hint: look at the documentation and review the reduce examples in basic enumerable lesson
 end

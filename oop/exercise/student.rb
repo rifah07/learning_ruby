@@ -9,14 +9,13 @@ class Student
   def better_grade_than?(other_student)
     grade > other_student.grade
   end
-  protected
-  def grade
-    @grade
-  end
 
+  protected
+
+  attr_reader :grade
 end
 
-alice = Student.new("Alice", 90)
-bob = Student.new("Bob", 98)
+alice = Student.new('Alice', 90)
+bob = Student.new('Bob', 98)
 
-puts "Well Done!" if bob.better_grade_than?(alice)
+puts 'Well Done!' if bob.better_grade_than?(alice)

@@ -4,7 +4,7 @@ vehicles = {
   caleb: { year: 2021, make: 'Honda', model: 'Accord' }
 }
 
-vehicles_filtered = vehicles.select { |name, data| data[:year] >= 2020 }
+vehicles_filtered = vehicles.select { |_name, data| data[:year] >= 2020 }
 
 pp vehicles_filtered
 

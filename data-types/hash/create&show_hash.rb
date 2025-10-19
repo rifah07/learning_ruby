@@ -8,52 +8,50 @@
 
 # There are two main syntaxes for creating hashes:
 # Traditional syntax using the "hash rocket" (=>):
-old_syntax = { "name" => "Alice", "age" => 30 }
 
 
 # Modern syntax for symbol keys:
-person = { name: "Alice", age: 30 }
 # Both syntaxes are valid, but the modern syntax is more concise and preferred for symbol keys.
 
 # another example of hash with hash rocket: =>
 my_hash = {
-  "a random word" => "ahoy",
+  'a random word' => 'ahoy',
   "Dorothy's math test score" => 94,
-  "an array" => [1, 2, 3],
-  "an empty hash within a hash" => {}
+  'an array' => [1, 2, 3],
+  'an empty hash within a hash' => {}
 }
-print "Check my_hash: "
+print 'Check my_hash: '
 p my_hash
 # another way to create an empty hash
-my_hash = Hash.new
-print "Check empty hash: "
-puts my_hash               #=> {}
+my_hash = {}
+print 'Check empty hash: '
+puts my_hash #=> {}
 
 # another way to create an empty hash
 my_hash = {}
-print "Check empty hash: "
-p my_hash               #=> {}
+print 'Check empty hash: '
+p my_hash #=> {}
 
 # another way to create a hash with default values
 shoes = {
-  "summer" => "sandals",
-  "winter" => "boots"
+  'summer' => 'sandals',
+  'winter' => 'boots'
 }
-print "Check shoes hash: "
-puts shoes["summer"]   #=> "sandals"
-print "Check shoes hash for a non-existing key: "
-puts shoes["autumn"]  #=> nil
+print 'Check shoes hash: '
+puts shoes['summer'] #=> "sandals"
+print 'Check shoes hash for a non-existing key: '
+puts shoes['autumn'] #=> nil
 
 # To provide a default value for missing keys, you can use:
-shoes = Hash.new("not found")
-print "Check shoes hash with default value: "
-puts shoes["spring"]   #=> "not found"
+shoes = Hash.new('not found')
+print 'Check shoes hash with default value: '
+puts shoes['spring'] #=> "not found"
 
 # Sometimes, this behavior can be problematic for you if silently
 # returning a nil value could potentially wreak havoc in your program.
 # Luckily, hashes have a fetch method that will raise an error when you try to access a key that is not in your hash.
 
-print "Using fetch method to access a key: #{shoes.fetch("autumn", "this is blank")}\n"
+print "Using fetch method to access a key: #{shoes.fetch('autumn', 'this is blank')}\n"
 
 
 # Hashes are mutable, allowing you to add, modify, and delete key-value pairs after creation.

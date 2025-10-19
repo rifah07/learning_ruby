@@ -1,4 +1,4 @@
-# The loop loop (say what????) is Ruby’s loop that just won’t quit. 
+# The loop loop (say what????) is Ruby’s loop that just won’t quit.
 # It’s an infinite loop that will keep going unless you specifically request for it to stop, using the break command.
 # - The Odlin Project
 
@@ -13,12 +13,11 @@ end
 
 i = 0
 loop do
-  i = i + 2
+  i += 2
   if i == 4
-    next        # skip rest of the code in this iteration
+    next # skip rest of the code in this iteration
   end
+
   puts i
-  if i == 10
-    break
-  end
+  break if i == 10
 end

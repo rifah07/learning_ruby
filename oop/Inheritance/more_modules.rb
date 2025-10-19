@@ -24,9 +24,9 @@ end
 
 # We call these classes using the module name and two colons (::)
 tommy = Mammal::Dog.new
-tommy.speak("Arf!")
+tommy.speak('Arf!')
 kitty = Mammal::Cat.new
-kitty.say_name("Kitty")
+kitty.say_name('Kitty')
 
 # -----------------------------
 # 2. MODULES AS CONTAINERS
@@ -45,5 +45,5 @@ value = Temperature_Converter.fahrenheit_to_celsius(23)
 puts value
 
 # Or like this (less common way):
-value = Temperature_Converter::fahrenheit_to_celsius(32)
+value = Temperature_Converter.fahrenheit_to_celsius(32)
 puts value

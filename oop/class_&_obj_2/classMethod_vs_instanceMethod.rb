@@ -22,12 +22,12 @@ class GoodDog
 
   # Example: This method returns info about the *calling* object
   def info
-    "#{self.name} weighs #{self.weight} and is #{self.height} tall."
+    "#{name} weighs #{weight} and is #{height} tall."
   end
 
   # Test: What is self inside an instance method?
   def what_is_self
-    self  # Refers to the object (e.g., sparky)
+    self # Refers to the object (e.g., sparky)
   end
 
   # ------------------------------------------------------
@@ -87,7 +87,7 @@ class DemoSetter
   attr_accessor :name
 
   def set_name_problem(name)
-    name = name # assigns parameter to local var, DOES NOT set @name!
+    name # assigns parameter to local var, DOES NOT set @name!
   end
 
   def set_name_proper(name)
@@ -96,9 +96,9 @@ class DemoSetter
 end
 
 demo = DemoSetter.new
-demo.set_name_problem("Foo")
+demo.set_name_problem('Foo')
 puts demo.name # Prints nothing (nil)!
-demo.set_name_proper("Bar")
+demo.set_name_proper('Bar')
 puts demo.name # Prints "Bar"
 
 # ==============================================

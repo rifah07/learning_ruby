@@ -5,28 +5,28 @@
 # A hash in Ruby is a dictionary-like collection of key-value pairs where each unique key maps to a specific value.
 # Hash objects are similar to arrays but use arbitrary keys rather than ordered indices for accessing values
 # Keys can be either strings or symbols.
-person = {name: "Alice", age: 24, city: "California"}
+person = { name: 'Alice', age: 24, city: 'California' }
 
-puts "Check if key exist"
+puts 'Check if key exist'
 puts person.key?(:name)
 puts person.key?(:country)
 
-puts "Check if value exist"
-puts person.value?("Alice")
-puts person.value?("New York")
+puts 'Check if value exist'
+puts person.value?('Alice')
+puts person.value?('New York')
 
 # With string keys
-scores= {"math" => 95, "science" => 94, "english" => 96}
-puts "Check if key exist in scores"
-puts scores.key?("math")
-puts scores.key?("history")
-puts "Check if value exist in scores"
+scores = { 'math' => 95, 'science' => 94, 'english' => 96 }
+puts 'Check if key exist in scores'
+puts scores.key?('math')
+puts scores.key?('history')
+puts 'Check if value exist in scores'
 puts scores.value?(95)
 puts scores.value?(100)
 
 # Ruby provides several equivalent methods for checking key existence:
 
-puts "Examples of key existence methods in hash"
+puts 'Examples of key existence methods in hash'
 hash = { a: 1, b: 2 }
 
 # All of these do the same thing:

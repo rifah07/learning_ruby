@@ -5,9 +5,9 @@
   puts alphabet if idx % 3 == 2
 end
 
-#2
+# 2
 # Using map (and one other method), create an array that lists the numbers 0 to -100 in descending order.
 # Without typing all the numbers manually, of course.
-puts 100.times.map {|num| -num}
+puts(100.times.map { |num| -num })
 # or
-puts (0..100).map {|num| -num}
+puts((0..100).map { |num| -num })

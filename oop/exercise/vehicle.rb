@@ -3,17 +3,21 @@ module Towable
     pounds < 2000
   end
 end
+
 class Vehicle
   attr_accessor :color
   attr_reader :year, :model
+
   @@number_of_vehicles = 0
 
   def age
-    "Your #{self.model} is #{self.years_old} years old"
+    "Your #{model} is #{years_old} years old"
   end
+
   def self.number_of_vehicles
     puts "Number of Vehicles: #{@@number_of_vehicles}"
   end
+
   def self.gas_mileage(gallons, miles)
     puts "#{miles / gallons} miles per gallon gas"
   end
@@ -53,7 +57,7 @@ class Vehicle
   private
 
   def years_old
-    Time.now.year - self.year
+    Time.now.year - year
   end
 end
 
@@ -63,7 +67,6 @@ class MyCar < Vehicle
   def to_s
     "My car is a #{color}, #{year}, #{@model}"
   end
-
 end
 
 class MyTruck < Vehicle
@@ -72,9 +75,8 @@ class MyTruck < Vehicle
   NUMBER_OF_DOORS = 2
 
   def to_s
-    "My truck  is a #{self.color}, #{self.year}, #{self.model}!"
+    "My truck  is a #{color}, #{year}, #{model}!"
   end
-
 end
 
 rr = MyCar.new(1997, 'chevy lumina', 'white')
@@ -89,7 +91,7 @@ rr.current_speed
 rr.shut_down
 rr.age
 MyCar.gas_mileage(13, 351)
-rr.spray_paint("red")
+rr.spray_paint('red')
 puts rr
 puts MyCar.ancestors
 puts MyTruck.ancestors

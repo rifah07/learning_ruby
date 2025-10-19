@@ -1,33 +1,33 @@
 # create hash
 
 shoes = {
-  "summer" => "sandals",
-  "winter" => "boots"
+  'summer' => 'sandals',
+  'winter' => 'boots'
 }
-print "The shoe for summer: "
-puts shoes.fetch("summer")
-print "The shoe for hiking: "
-puts shoes.fetch("hiking", "hiking boots") # use fetch with default
+print 'The shoe for summer: '
+puts shoes.fetch('summer')
+print 'The shoe for hiking: '
+puts shoes.fetch('hiking', 'hiking boots') # use fetch with default
 
 # add values
-shoes["fall"] = "sneakers"
-print "Shoe for fall: "
-puts shoes["fall"]
+shoes['fall'] = 'sneakers'
+print 'Shoe for fall: '
+puts shoes['fall']
 
-print "Shoes hash now: "
+print 'Shoes hash now: '
 p shoes
 
 # remove data
 
-shoes.delete("winter")
-print "Shoes hash after removing winter: "
+shoes.delete('winter')
+print 'Shoes hash after removing winter: '
 p shoes
-p shoes["winter"]
+p shoes['winter']
 
 
 # update data
-shoes["fall"] = "boots"
-print "Shoe for fall after update: "
-puts shoes["fall"]
-print "Shoes hash after update: "
+shoes['fall'] = 'boots'
+print 'Shoe for fall after update: '
+puts shoes['fall']
+print 'Shoes hash after update: '
 p shoes

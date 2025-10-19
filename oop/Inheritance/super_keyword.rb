@@ -1,18 +1,16 @@
-=begin
-Ruby provides us with the super keyword to call methods earlier in the method lookup path.
-When you call super from within a method, it searches the method lookup path for a method
-with the same name, then invokes it.
-=end
+# Ruby provides us with the super keyword to call methods earlier in the method lookup path.
+# When you call super from within a method, it searches the method lookup path for a method
+# with the same name, then invokes it.
 
 class Animal
   def speak
-    "Hello"
+    'Hello'
   end
 end
 
 class Cat < Animal
   def speak
-    super + " from Cat class"
+    super + ' from Cat class'
   end
 end
 

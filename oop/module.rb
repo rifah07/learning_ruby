@@ -1,13 +1,11 @@
-=begin
-A module allows us to group reusable code into one place.
-We use modules in our classes by using the include method invocation,
-followed by the module name. Modules are also used as a namespace.
-  - The Launch School E-Book
-=end
+# A module allows us to group reusable code into one place.
+# We use modules in our classes by using the include method invocation,
+# followed by the module name. Modules are also used as a namespace.
+#   - The Launch School E-Book
 
 
 
-  module Speak
+module Speak
   def speak(sound)
     puts sound
   end
@@ -22,25 +20,21 @@ class HumanBeing
 end
 
 tomy = GoodDog.new
-tomy.speak("Arf!")
+tomy.speak('Arf!')
 
 toma = HumanBeing.new
-toma.speak("Hello")
+toma.speak('Hello')
 
-=begin
-This is possible through "mixing in" the module Speak.
-It's as if we copy-pasted the speak method into the GoodDog and HumanBeing classes.
-=end
+# This is possible through "mixing in" the module Speak.
+# It's as if we copy-pasted the speak method into the GoodDog and HumanBeing classes.
 
 # We can use the ancestors method on any class to find out the method lookup chain.
 
-puts "-------GoodDog Ancsetors----------"
+puts '-------GoodDog Ancsetors----------'
 puts GoodDog.ancestors
 
-=begin
-Ruby has a distinct lookup path that it follows each time a method is called.
-We used our program from above to see what the method lookup path is for our GoodDog class.
-=end
+# Ruby has a distinct lookup path that it follows each time a method is called.
+# We used our program from above to see what the method lookup path is for our GoodDog class.
 
-puts "-------HumanBeing Ancsetors--------"
+puts '-------HumanBeing Ancsetors--------'
 puts HumanBeing.ancestors

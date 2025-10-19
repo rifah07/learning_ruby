@@ -44,7 +44,7 @@ class GoodDog
   # USING SELF TO CALL OTHER INSTANCE METHODS
   # ----------------------------------------
   def info
-    "#{self.name} weighs #{self.weight} and is #{self.height} tall."
+    "#{name} weighs #{weight} and is #{height} tall."
   end
 
   # ----------------------------------------
@@ -101,8 +101,8 @@ class GoodDog
   end
 end
 
-dog1 = GoodDog.new('Max','14 inches','20 lbs')
-dog2 = GoodDog.new('Buddy','16 inches','25 lbs')
+GoodDog.new('Max', '14 inches', '20 lbs')
+GoodDog.new('Buddy', '16 inches', '25 lbs')
 
 puts GoodDog.total_number_of_dogs
 # => 2 (Because we created 2 objects)

@@ -1,19 +1,19 @@
 # inheritance based
 class Animal
   def speak
-    puts "Some generic sound"
+    puts 'Some generic sound'
   end
 end
 
 class Dog < Animal
   def speak
-    puts "Woof!"
+    puts 'Woof!'
   end
 end
 
 class Cat < Animal
   def speak
-    puts "Meow!"
+    puts 'Meow!'
   end
 end
 
@@ -25,13 +25,13 @@ animals.each { |animal| animal.speak }
 
 class Duck
   def quack
-    puts "Quack quack!"
+    puts 'Quack quack!'
   end
 end
 
 class Person
   def quack
-    puts "The person imitates a duck!"
+    puts 'The person imitates a duck!'
   end
 end
 

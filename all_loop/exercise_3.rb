@@ -2,7 +2,7 @@
 
 def countdown(n)
   if n < 0
-    puts "COUNTDOWN FINISHED"
+    puts 'COUNTDOWN FINISHED'
   else
     puts n
     countdown(n - 1)

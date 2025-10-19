@@ -20,18 +20,16 @@ class Animal
   include Walkable
 
   def speak
-    "This animal can speak"
+    'This animal can speak'
   end
 end
 
-puts "----------------Animal method lookup path----------------"
+puts '----------------Animal method lookup path----------------'
 puts Animal.ancestors
 
-=begin
-This means that when we call a method of any Animal object,
-first Ruby looks in the Animal class, then the Walkable module,
-then the Object class, then the Kernel module, and finally the BasicObject class.
-=end
+# This means that when we call a method of any Animal object,
+# first Ruby looks in the Animal class, then the Walkable module,
+# then the Object class, then the Kernel module, and finally the BasicObject class.
 
 fido = Animal.new
 puts fido.speak
@@ -44,13 +42,11 @@ class Cat < Animal
   include Climbable
 end
 
-puts "---Cat method lookup---"
+puts '---Cat method lookup---'
 puts Cat.ancestors
 
 # Ruby actually looks at the last module we included first
-=begin
- The module included in the superclass made it on to the method lookup path.
- That means that all Cat objects will have access to not only Animal methods,
- but also methods defined in the Walkable module, as well as all other modules mixed
- in to any of its superclasses.
-=end
+#  The module included in the superclass made it on to the method lookup path.
+#  That means that all Cat objects will have access to not only Animal methods,
+#  but also methods defined in the Walkable module, as well as all other modules mixed
+#  in to any of its superclasses.

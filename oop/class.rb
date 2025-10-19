@@ -15,6 +15,6 @@ class GoodHorse
   end
 end
 
-arthur = GoodHorse.new("Arthur", "brown")
+arthur = GoodHorse.new('Arthur', 'brown')
 arthur.run
-arthur.eat("hay")
+arthur.eat('hay')

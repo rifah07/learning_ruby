@@ -3,11 +3,10 @@ mutable = Array.new(3, Array.new(2))
 mutable[0][0] = 1000
 puts "The Mutable nested array: #{mutable}"
 #=> [[1000, nil], [1000, nil], [1000, nil]]
-=begin 
-Changing the value of the first element in the first nested array, causes
-the first element to change in all three nested arrays! This same behavior
-will happen with strings, hashes, or any other mutable objects.
-=end
+#
+# Changing the value of the first element in the first nested array, causes
+# the first element to change in all three nested arrays! This same behavior
+# will happen with strings, hashes, or any other mutable objects.
 
 immutable = Array.new(3) { Array.new(2) }
 #=> [[nil, nil], [nil, nil], [nil, nil]]

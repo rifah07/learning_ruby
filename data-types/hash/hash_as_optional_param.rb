@@ -7,5 +7,5 @@ def greeting(name, options = {})
   end
 end
 
-greeting("Bob")
-greeting("Bob", {age: 62, city: "New York City"})
+greeting('Bob')
+greeting('Bob', { age: 62, city: 'New York City' })

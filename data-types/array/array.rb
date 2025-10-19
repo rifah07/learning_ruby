@@ -11,14 +11,14 @@
 
 # Create an array
 # here used 2 optional arguments (initial size and default value):
-puts Array.new               #=> []
+puts [] #=> []
 puts Array.new(3)            #=> [nil, nil, nil]
 puts Array.new(3, 7)         #=> [7, 7, 7]
 puts Array.new(3, true)      #=> [true, true, true]
 
 # you can also create an array with a block: and without "":
-users = %w(john david peter)
-puts users            #=> ["john", "david", "peter"]
+users = %w[john david peter]
+puts users #=> ["john", "david", "peter"]
 
-puts users.unshift "robert"  # Adds an element in front of the array
+puts users.unshift 'robert'  # Adds an element in front of the array
 puts users.shift             # Removes the first element of the array and returns it

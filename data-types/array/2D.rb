@@ -1,6 +1,6 @@
 users = [
- [1, 'Peter'],
- [2, 'Steven']
+  [1, 'Peter'],
+  [2, 'Steven']
 ]
 
 puts users[0][0]  # Output: 1

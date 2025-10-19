@@ -1,9 +1,7 @@
 def divide(number, divisor)
-  begin
-    number / divisor
-  rescue ZeroDivisionError => e
-    e.message
-  end
+  number / divisor
+rescue ZeroDivisionError => e
+  e.message
 end
 
 puts divide(16, 4)

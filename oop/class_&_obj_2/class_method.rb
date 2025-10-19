@@ -1,16 +1,14 @@
-=begin
-Class methods are methods we can call directly on the class itself,
-without having to instantiate any objects.
-When defining a class method, we prepend the method name with the reserved word -> (self.) .
-
-class methods are where we put functionality that does not pertain to individual objects.
-Objects contain state, and if we have a method that does not need to deal with states,
-then we can just use a class method.
-- The Launch School
-
-we can create variables for an entire class that are appropriately named class variables.
-Class variables are created using two @ symbols like so: @@
-=end
+# Class methods are methods we can call directly on the class itself,
+# without having to instantiate any objects.
+# When defining a class method, we prepend the method name with the reserved word -> (self.) .
+#
+# class methods are where we put functionality that does not pertain to individual objects.
+# Objects contain state, and if we have a method that does not need to deal with states,
+# then we can just use a class method.
+# - The Launch School
+#
+# we can create variables for an entire class that are appropriately named class variables.
+# Class variables are created using two @ symbols like so: @@
 
 class GoodDog
   @@number_of_dogs = 0
@@ -27,43 +25,35 @@ end
 puts GoodDog.total_number_of_dogs   # => 0
 
 dog1 = GoodDog.new
-dog2 = GoodDog.new
+GoodDog.new
 
 puts GoodDog.total_number_of_dogs   # => 2
 
-=begin
-Class variables allow all instances to share and update the same piece of data,
-keeping a count that reflects the total number of objects created from the class.
-This way, you have a single source of truth for this count,
-=end
+# Class variables allow all instances to share and update the same piece of data,
+# keeping a count that reflects the total number of objects created from the class.
+# This way, you have a single source of truth for this count,
 
 puts dog1
 
-=begin
-puts dog1 is equivalent to puts dog1.to_s
-By default, the to_s method returns the name of the object's class and an encoding of the object id.
-Note: puts method calls to_s for any argument that is not an array. For an array, it writes on separate
-lines the result of calling to_s on each element of the array.
-=end
+# puts dog1 is equivalent to puts dog1.to_s
+# By default, the to_s method returns the name of the object's class and an encoding of the object id.
+# Note: puts method calls to_s for any argument that is not an array. For an array, it writes on separate
+# lines the result of calling to_s on each element of the array.
 
-=begin
-There's another method called p that's very similar to puts, except it doesn't call to_s on its argument;
-t calls another built-in Ruby instance method called inspect. The inspect method is very
-helpful for debugging purposes, so we don't want to override it.
-p sparky is equivalent to puts sparky.inspect.
-=end
+# There's another method called p that's very similar to puts, except it doesn't call to_s on its argument;
+# t calls another built-in Ruby instance method called inspect. The inspect method is very
+# helpful for debugging purposes, so we don't want to override it.
+# p sparky is equivalent to puts sparky.inspect.
 
-=begin
-Besides being called automatically when using puts, another important
-attribute of the to_s method is that it's also automatically called in string interpolation.
-Example:
-irb :001 > arr = [1, 2, 3]
-=> [1, 2, 3]
-irb :002 > x = 5
-=> 5
-irb :003 > "The #{arr} array doesn't include #{x}."
-=> The [1, 2, 3] array doesn't include 5.
-
-In summary, the to_s method is called automatically on
-the object when we use it with puts or when used with string interpolation.
-=end
+# Besides being called automatically when using puts, another important
+# attribute of the to_s method is that it's also automatically called in string interpolation.
+# Example:
+# irb :001 > arr = [1, 2, 3]
+# => [1, 2, 3]
+# irb :002 > x = 5
+# => 5
+# irb :003 > "The #{arr} array doesn't include #{x}."
+# => The [1, 2, 3] array doesn't include 5.
+#
+# In summary, the to_s method is called automatically on
+# the object when we use it with puts or when used with string interpolation.

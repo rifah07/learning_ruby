@@ -59,40 +59,40 @@ class Foo
 end
 
 foo = Foo.new
-puts "Example 1: "
+puts 'Example 1: '
 puts foo # Ruby ignores our to_s (since 37 is not a string) => prints Object#to_s result: #<Foo:0x...>
 puts "foo is #{foo}"
-puts "-" * 50
+puts '-' * 50
 
 # Example 2: GOOD - Returning a String
 class FooFixed
   def to_s
-    "37"
+    '37'
   end
 end
 
 foo_fixed = FooFixed.new
-puts "Example 2: "
+puts 'Example 2: '
 puts foo_fixed # => "37"
 puts "foo_fixed is #{foo_fixed}" # => "foo_fixed is 37"
-puts "-" * 50
+puts '-' * 50
 
 # Example 3: Custom class with attribute
 class Bar
   attr_reader :xyz
 
   def initialize
-    @xyz = {a: 1, b: 2}
+    @xyz = { a: 1, b: 2 }
   end
 
   # Overriding to_s for the whole Bar object
   def to_s
-    "I am a Bar Object"
+    'I am a Bar Object'
   end
 end
 
 bar = Bar.new
-puts "Example 3: "
-puts bar  # => "I am a Bar object!" (our custom to_s is used)
-puts bar.xyz   # => "{:a=>1, :b=>2}" (Hash#to_s is used, NOT Bar#to_s)
-puts "bar details #{bar}"  # => "bar details: I am a Bar object!"
+puts 'Example 3: '
+puts bar # => "I am a Bar object!" (our custom to_s is used)
+puts bar.xyz # => "{:a=>1, :b=>2}" (Hash#to_s is used, NOT Bar#to_s)
+puts "bar details #{bar}" # => "bar details: I am a Bar object!"

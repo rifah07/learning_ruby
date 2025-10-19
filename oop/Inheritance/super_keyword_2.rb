@@ -8,21 +8,20 @@ class Animal
   end
 
   def speak
-    "Hello."
+    'Hello.'
   end
 end
 
 class Cat < Animal
-
   def initialize(age, name)
     super(name)
     @age = age
   end
+
   def speak
     super + " My name is #{@name}! and my age is #{@age}"
   end
 end
 
-kitty = Cat.new(2, "Kitty")
+kitty = Cat.new(2, 'Kitty')
 puts kitty.speak
-

@@ -1,4 +1,4 @@
-lts = %w{ a b c d e f}
+lts = %w[a b c d e f]
 
 puts lts.inspect
 puts "Array has #{lts.length} elements"
@@ -13,10 +13,10 @@ puts lts.eql? lts.dup
 puts lts.eql? lts.dup.delete_at(0)
 # The delete_at method deletes the first element of the array. This time the two arrays do not equal.
 
-puts "Use clear method:"
+puts 'Use clear method:'
 puts lts.inspect
 lts.clear
-puts "After clear:"
+puts 'After clear:'
 puts lts.inspect
 # The clear method removes all elements from the array.
 # After the clear method, the array is empty.
@@ -25,7 +25,7 @@ puts lts.empty?
 
 # another part
 
-chars = %w{a b c d e}
+chars = %w[a b c d e]
 
 reversed_chars = chars.reverse
 puts reversed_chars.inspect
@@ -44,7 +44,7 @@ puts chars.inspect
 
 numbers = [1, 2, 2, 2, 3, 4, 5, 8, 11]
 
-puts "Numbers array:"
+puts 'Numbers array:'
 puts numbers.inspect
 puts numbers.length
 puts numbers.first

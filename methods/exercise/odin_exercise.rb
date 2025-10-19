@@ -4,28 +4,27 @@
 # hint: use Integer#chr
 
 def ascii_translator(number)
-  if number.between?(0, 127)
-    return number.chr
-  else
-    "Invalid ASCII code: #{number}"
-  end
+  return number.chr if number.between?(0, 127)
+
+
+  "Invalid ASCII code: #{number}"
 end
 
 puts ascii_translator(65)
 puts ascii_translator(128)
-puts ""
+puts ''
 
 # method name: #common_sports
 # parameters: current_sports and favorite_sports (both arrays)
 # return value: an array containing items in both arrays
 # hint: use Array#intersection
 
-def common_sports (current_sports, favorite_sports)
+def common_sports(current_sports, favorite_sports)
   current_sports.intersection(favorite_sports)
 end
-print "Common sport(s) is/are: "
-puts common_sports(["soccer", "basketball", "tennis"], ["tennis", "baseball"])
-puts ""
+print 'Common sport(s) is/are: '
+puts common_sports(%w[soccer basketball tennis], %w[tennis baseball])
+puts ''
 
 
 # method name: #alphabetical_list
@@ -33,26 +32,26 @@ puts ""
 # return value: games, alphabetically sorted and duplicates removed
 # hint: chain Array#uniq and Array#sort together
 
-def alphabetical_list (games)
+def alphabetical_list(games)
   games.uniq.sort
 end
 
-print "Unique and sorted list of alphabets: "
-p alphabetical_list(["a", "c", "b", "a"])
-puts ""
+print 'Unique and sorted list of alphabets: '
+p alphabetical_list(%w[a c b a])
+puts ''
 
 
 # method name: #lucky_number
 # parameter: number (an integer) with default value of 7
 # return value: a string "Today's lucky number is <number>"
 
-def lucky_number (number = 7)
+def lucky_number(number = 7)
   "Today's lucky number is #{number}"
 end
 
-puts lucky_number()
+puts lucky_number
 puts lucky_number(3)
-puts ""
+puts ''
 
 
 # method name: #ascii_code
@@ -61,17 +60,17 @@ puts ""
 # explicit return value: 'Input Error' if character's length does not equal 1
 # hint: use String#ord
 
-def ascii_code (character)
+def ascii_code(character)
   if character.length == 1
     character.ord
   else
-    "Input Error"
+    'Input Error'
   end
 end
 
-puts ascii_code("A")
-puts ascii_code("AB")
-puts ""
+puts ascii_code('A')
+puts ascii_code('AB')
+puts ''
 
 
 # method name: #pet_pun
@@ -84,7 +83,7 @@ puts ""
 
 def pet_pun(animal)
   if animal == 'cat'
-    puts  'Cats are purr-fect!'
+    puts 'Cats are purr-fect!'
   elsif animal == 'dog'
     puts 'Dogs are paw-some!'
   else
@@ -95,7 +94,7 @@ end
 pet_pun('cat')
 pet_pun('dog')
 pet_pun('hamster')
-puts ""
+puts ''
 
 
 # method name: #twenty_first_century?
@@ -109,4 +108,4 @@ end
 
 puts twenty_first_century?(2023) # true
 puts twenty_first_century?(1999) # false
-puts ""
+puts ''

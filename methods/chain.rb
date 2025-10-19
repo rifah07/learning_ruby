@@ -1,10 +1,10 @@
-#One of the magical properties of methods that allows to write very concise code is 
+# One of the magical properties of methods that allows to write very concise code is
 # being able to chain methods together. This can be done using Ruby’s built-in methods
 # or with methods that you create. -the odin project
 
-phrase = ["be", "to", "not", "or", "be", "to"]
+phrase = %w[be to not or be to]
 
-puts phrase.reverse.join(" ").capitalize
+puts phrase.reverse.join(' ').capitalize
 #=> "To be or not to be"
 
 # In this example, we are using three methods:
@@ -13,15 +13,13 @@ puts phrase.reverse.join(" ").capitalize
 # - capitalize: capitalizes the first letter of the string
 
 # another method
-p "hi there".length.to_s      # returns "8" - a String
+p 'hi there'.length.to_s # returns "8" - a String
 p 8
 
 # an important part
 # which order the methods in chain method works?
-=begin
-answer: When chaining methods, the innermost method call (the one deepest inside the parentheses) is invoked first,
-and then the outer methods are called in order. In other words, method calls are executed from the inside out,
-starting with the arguments before the outer method.
-It's really about the order of evaluation: Ruby evaluates method arguments first (from innermost to outermost)
-before invoking the outer methods.
-=end
+# answer: When chaining methods, the innermost method call (the one deepest inside the parentheses) is invoked first,
+# and then the outer methods are called in order. In other words, method calls are executed from the inside out,
+# starting with the arguments before the outer method.
+# It's really about the order of evaluation: Ruby evaluates method arguments first (from innermost to outermost)
+# before invoking the outer methods.

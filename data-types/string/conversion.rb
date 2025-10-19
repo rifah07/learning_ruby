@@ -1,5 +1,5 @@
-puts 5.to_s 
+puts 5
 
-puts nil.to_s 
+puts nil
 
-puts :symbol.to_s
+puts :symbol
