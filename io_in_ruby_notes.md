@@ -100,3 +100,143 @@ dev_null.close
 Attempting to use a closed stream raises `IOError`. [page:1]
 
 ---
+
+## 5. Position, EOF, and rewind
+
+Each IO object has a **cursor position** (offset in the stream).
+
+### Reading and position
+
+Example file:
+
+``
+Lorem ipsum    
+dolor    
+sit amet...
+``
+
+Steps: [page:1]  
+
+````
+fd = IO.sysopen('/path/to/lorem.txt')
+lorem = IO.new(fd)
+
+lorem.gets # => "Lorem ipsum\n"
+lorem.pos # => 12
+
+lorem.gets # => "dolor\n"
+lorem.gets # => "sit amet...\n"
+lorem.pos # => 30
+````
+
+
+- Each `gets` reads a line and moves the cursor forward. [page:1]
+
+### End of file (EOF)
+
+If you try to read after the end:
+
+````
+lorem.gets # => nil
+lorem.eof? # => true
+````
+
+
+- `gets` returns `nil` at EOF, and `eof?` returns true. [page:1]
+
+### Rewinding
+
+Use `rewind` to go back to the start:
+````
+lorem.rewind
+lorem.pos # => 0
+````
+
+
+- `rewind` resets the cursor to position 0, so you can read again from the beginning. [page:1]
+
+### Writing and overwriting
+
+Given a file opened for read/write: [page:1]  
+
+````
+fd = IO.sysopen('/path/to/test.txt', 'w+')
+io = IO.new(fd)
+
+io.puts 'hello world'
+io.puts 'goodbye world'
+
+io.gets # => nil (cursor is at end)
+io.eof? # => true
+
+io.rewind
+io.gets # => "hello world\n"
+````
+
+If you move the cursor and write in the middle:
+
+````
+io.pos # => 12
+io.puts 'middle'
+io.rewind
+io.read # => "hello world\nmiddle\n world\n"
+````
+
+- Writing in the middle **overwrites** existing bytes after the cursor. [page:1]
+- This happens because streams do not load the entire file into memory; they work at the current position only. [page:1]
+
+---
+
+## 6. IO subclasses and IO-like types
+
+### File
+
+- `File` is a subclass of `IO`. [page:1]
+- It simplifies working with regular files and adds helpers like: [page:1]
+    - `File#size`
+    - `File#chmod`
+    - `File.path`
+
+### Sockets
+
+- Ruby socket classes (e.g. `TCPSocket`) ultimately inherit from `IO`. [page:1]
+
+Example: [page:1]  
+
+````
+require 'socket'
+
+socket = TCPSocket.new 'localhost', 3000
+socket.puts 'GET "/"'
+response_line = socket.gets
+
+=> "HTTP/1.1 400 Bad Request \r\n"
+````
+
+- You can use familiar IO methods (`puts`, `gets`) to talk over the network. [page:1]
+
+### StringIO
+
+- `StringIO` lets a **String** behave like an IO. [page:1]
+
+Example: [page:1]  
+
+````
+string_io = StringIO.new('hello world')
+string_io.gets # => "hello world"
+string_io.puts 'goodby world'
+string_io.rewind
+string_io.read # => "hello worldgoodby world\n"
+````
+
+
+- `StringIO` does **not** inherit from `IO`, but it implements similar methods. [page:1]
+- Very useful in tests to simulate a file or stream in memory. [page:1]
+
+### Tempfile
+
+- `Tempfile` manages temporary files and implements the same interface as `File`. [page:1]
+- It is not a subclass of `IO`, but it is **IO-like**, so it can be passed wherever an IO object is expected. [page:1]
+
+---
+
