@@ -240,3 +240,111 @@ string_io.read # => "hello worldgoodby world\n"
 
 ---
 
+## 7. Using IO injection in command-line apps
+
+Original version (hard to test because it prints directly): [page:1]  
+
+````
+class SystemTask
+def execute
+puts "preparing to execute"
+puts "starting first task"
+first_task
+puts "starting second task"
+second_task
+puts "execution complete"
+end
+end
+````
+
+Improved version using dependency injection: [page:1]  
+````
+class SystemTask
+    def initialize(io = $stdout)
+        @io = io
+    end
+
+    def execute
+        @io.puts "preparing to execute"
+        @io.puts "starting first task"
+        first_task
+        @io.puts "starting second task"
+        second_task
+        @io.puts "execution complete"
+    end
+end
+````
+
+
+- In production, you can still do `SystemTask.new.execute` (defaults to `$stdout`). [page:1]
+- In tests, you can pass: [page:1]
+    - A **test double** that responds to `puts`.
+    - A **StringIO** to capture and assert on output.
+    - A stream to **`/dev/null`** if you do not care about output.
+
+Example test using `StringIO`: [page:1]  
+
+````
+io = StringIO.new
+system_task = SystemTask.new(io)
+system_task.execute
+
+io.rewind
+io.read
+
+=> "preparing to execute\nstarting first task\nstarting second task\nexecution complete\n"
+````
+
+
+---
+
+## 8. IO-like adapters for APIs
+
+Scenario: multiple APIs return reports in different ways (raw strings, CSV docs, downloadable files, etc.). [page:1]
+
+Solution: create an **adapter** per API that: [page:1]
+
+- Fetches the report.
+- Normalizes/standardizes the data.
+- Returns the result wrapped as an IO-like object (`File`, `Tempfile`, etc.).
+
+Example structure: [page:1]  
+````
+class API1Report
+    def fetch
+        # fetch report (CSV)
+        # standardize it
+        # return as a Tempfile
+    end
+end
+    
+class API2Report
+    def fetch
+        # fetch report
+        # return as a File
+    end
+end
+    
+class Persistor
+    def initialize(report)
+        @report = report # IO-like object
+    end
+    
+    def persist
+        # read/process/persist the report from @report
+    end
+end
+````
+
+
+- Because the reports are all IO-like, `Persistor` does not care which API they came from. [page:1]
+
+---
+
+## 9. Where to go next
+
+- 4.4 BSD’s I/O overview (for deeper Unix I/O, file descriptors, devices).
+- TTY system (how jobs, processes, and TTY device interact).
+- Practice Ruby I/O with a sample repo and a chapter from “Read Ruby”.
+
+---
