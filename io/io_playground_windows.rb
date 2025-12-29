@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 #!/usr/bin/env ruby
-# IO Playground for Windows - STRINGIO FIXED
-# Run: ruby io_playground_windows_final_fixed.rb
+# IO Playground for Windows
 
 require 'stringio'
 require 'tempfile'
 
 puts "=" * 60
-puts "🛝 RUBY IO PLAYGROUND (WINDOWS FINAL FIX)"
+puts "🛝 RUBY IO PLAYGROUND"
 puts "=" * 60
 
 # 1. STANDARD STREAMS
@@ -74,7 +73,7 @@ puts "   read all → #{test_file.read}"
 test_file.close!
 test_file.unlink
 
-# 4. STRINGIO - BULLETPROOF WINDOWS VERSION
+# 4. STRINGIO
 puts "\n4️⃣ STRINGIO (WINDOWS BULLETPROOF)"
 
 puts "   ✅ Write-only StringIO (using string method):"
