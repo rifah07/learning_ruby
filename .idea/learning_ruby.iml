@@ -9,7 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="ruby-3.4.4-p34" jdkType="RUBY_SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="actioncable (v8.0.2, ruby-3.4.4-p34) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailbox (v8.0.2, ruby-3.4.4-p34) [gem]" level="application" />
@@ -96,6 +96,5 @@
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.8.0, ruby-3.4.4-p34) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, ruby-3.4.4-p34) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.7.3, ruby-3.4.4-p34) [gem]" level="application" />
-    <orderEntry type="module" module-name="" />
   </component>
 </module>
