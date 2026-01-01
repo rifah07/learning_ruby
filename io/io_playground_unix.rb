@@ -94,3 +94,26 @@ puts "   Tempfile path: #{temp.path}"
 puts "   Content: #{temp.read}"
 temp.close!
 temp.unlink
+
+# 6. IO INJECTION (cross-platform)
+puts "\n6️⃣ IO INJECTION"
+class PrintableTask
+  def initialize(io = $stdout)
+    @io = io
+  end
+
+  def run
+    @io.puts "🚀 Task started"
+    @io.puts "📝 Doing work..."
+    @io.puts "✅ Task complete"
+  end
+end
+
+puts "   Normal usage:"
+PrintableTask.new.run
+
+captured = StringIO.new(nil, "w")
+PrintableTask.new(captured).run
+captured.rewind
+puts "   Captured: #{captured.read}"
+
