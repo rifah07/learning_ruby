@@ -47,3 +47,22 @@ puts "   ✅ UNIX: /dev/null + IO.sysopen works!"
 # dev_null_file = File.open(File::NULL, 'w+')
 # stdout_io = IO.new(1, 'w')
 # ════════════════════════════════════════════════════════════════
+
+# 3. FILE POSITION & REWIND (cross-platform)
+puts "\n3️⃣ FILE POSITION & REWIND"
+test_file = Tempfile.new('io-test')
+test_file.write("Line 1\nLine 2\nLine 3\n")
+test_file.rewind
+
+puts "   File content:"
+puts "   #{test_file.gets.chomp}"
+puts "   #{test_file.gets.chomp}"
+puts "   pos=#{test_file.pos}"
+puts "   gets → #{test_file.gets.inspect}"
+puts "   eof?=#{test_file.eof?}"
+
+test_file.rewind
+puts "   rewind → pos=#{test_file.pos}"
+puts "   read all → #{test_file.read}"
+test_file.close!
+test_file.unlink
