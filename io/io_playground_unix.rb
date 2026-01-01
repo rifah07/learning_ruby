@@ -85,3 +85,12 @@ puts "   ✅ UNIX r+ mode: #{string_io.read}"
 # puts "   write_io.string"
 # ════════════════════════════════════════════════════════════════
 
+# 5. TEMPFILe (cross-platform)
+puts "\n5️⃣ TEMPFILe"
+temp = Tempfile.new(['io-play', '.txt'])
+temp.write("Temp file content\n")
+temp.rewind
+puts "   Tempfile path: #{temp.path}"
+puts "   Content: #{temp.read}"
+temp.close!
+temp.unlink
