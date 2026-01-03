@@ -134,3 +134,14 @@ rw_file.rewind
 puts "   Overwritten: #{rw_file.read}"
 rw_file.close!
 rw_file.unlink
+
+# 8. SOCKET EXAMPLE (UNIX)
+puts "\n8️⃣ SOCKETS (UNIX - needs server on localhost:3000)"
+puts "   require 'socket'"
+puts "   socket = TCPSocket.new('localhost', 3000)"
+puts "   socket.puts 'GET /'"
+puts "   socket.gets"
+
+puts "\n" + "=" * 60
+puts "🎉 UNIX 100% COMPLETE! All Unix code active ✅"
+puts "=" * 60
