@@ -117,3 +117,20 @@ PrintableTask.new(captured).run
 captured.rewind
 puts "   Captured: #{captured.read}"
 
+# 7. POSITION OVERWRITING (cross-platform)
+puts "\n7️⃣ POSITION OVERWRITING"
+rw_file = Tempfile.new('overwrite-test')
+rw_file.puts "First line"
+rw_file.puts "Second line"
+rw_file.rewind
+
+puts "   Original:"
+puts "   #{rw_file.gets.chomp}"
+puts "   #{rw_file.gets.chomp}"
+
+rw_file.pos = 6
+rw_file.puts "MIDDLE"
+rw_file.rewind
+puts "   Overwritten: #{rw_file.read}"
+rw_file.close!
+rw_file.unlink
