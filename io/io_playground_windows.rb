@@ -3,8 +3,8 @@
 #!/usr/bin/env ruby
 # IO Playground for Windows
 
-require 'stringio'
-require 'tempfile'
+require "stringio"
+require "tempfile"
 
 puts "=" * 60
 puts "🛝 RUBY IO PLAYGROUND"
@@ -28,7 +28,7 @@ puts "Hello!"
 # 2. CREATING IO OBJECTS
 puts "\n2️⃣ CREATING IO OBJECTS"
 
-stdout_io = IO.new(1, 'w')
+stdout_io = IO.new(1, "w")
 stdout_io.puts "   ✅ WINDOWS: IO.new(1, 'w').puts → Hello from IO!"
 
 # ════════════════════════════════════════════════════════════════
@@ -38,7 +38,7 @@ stdout_io.puts "   ✅ WINDOWS: IO.new(1, 'w').puts → Hello from IO!"
 # ════════════════════════════════════════════════════════════════
 
 begin
-  dev_null_file = File.open(File::NULL, 'w+')
+  dev_null_file = File.open(File::NULL, "w+")
   dev_null_file.puts "   This goes to NUL → (nothing visible)"
   dev_null_file.rewind
   puts "   dev_null_file.gets → #{dev_null_file.gets.inspect}"
@@ -56,7 +56,7 @@ end
 
 # 3. FILE POSITION & REWIND
 puts "\n3️⃣ FILE POSITION & REWIND"
-test_file = Tempfile.new('io-test')
+test_file = Tempfile.new("io-test")
 test_file.write("Line 1\nLine 2\nLine 3\n")
 test_file.rewind
 
@@ -95,7 +95,7 @@ puts "   eof?=#{read_io.eof?}"
 
 # 5. TEMPFILe
 puts "\n5️⃣ TEMPFILe"
-temp = Tempfile.new(['io-play', '.txt'])
+temp = Tempfile.new(["io-play", ".txt"])
 temp.write("Temp file content\n")
 temp.rewind
 puts "   Tempfile path: #{temp.path}"
@@ -127,7 +127,7 @@ puts "   ✅ Output: #{captured.string}"  # ✅ USE .string instead of .read()
 
 # 7. POSITION OVERWRITING
 puts "\n7️⃣ POSITION OVERWRITING"
-rw_file = Tempfile.new('overwrite-test')
+rw_file = Tempfile.new("overwrite-test")
 rw_file.puts "First line"
 rw_file.puts "Second line"
 rw_file.rewind

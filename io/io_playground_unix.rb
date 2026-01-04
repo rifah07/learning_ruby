@@ -3,9 +3,9 @@
 #!/usr/bin/env ruby
 # IO Playground for UNIX/Linux/Mac
 
-require 'stringio'
-require 'tempfile'
-require 'socket'
+require "stringio"
+require "tempfile"
+require "socket"
 
 puts "=" * 60
 puts "🛝 RUBY IO PLAYGROUND (UNIX/LINUX/MAC)"
@@ -35,7 +35,7 @@ stdout_io.puts "   ✅ UNIX: IO.new(1).puts → Hello from IO! (no mode needed)"
 stdout_io.close
 
 # ✅ UNIX: /dev/null with IO.sysopen
-null_fd = IO.sysopen('/dev/null', 'w+')
+null_fd = IO.sysopen("/dev/null", "w+")
 dev_null = IO.new(null_fd)
 dev_null.puts "   This goes to /dev/null → (nothing visible)"
 puts "   dev_null.gets → #{dev_null.gets.inspect}"
@@ -50,7 +50,7 @@ puts "   ✅ UNIX: /dev/null + IO.sysopen works!"
 
 # 3. FILE POSITION & REWIND (cross-platform)
 puts "\n3️⃣ FILE POSITION & REWIND"
-test_file = Tempfile.new('io-test')
+test_file = Tempfile.new("io-test")
 test_file.write("Line 1\nLine 2\nLine 3\n")
 test_file.rewind
 
@@ -87,7 +87,7 @@ puts "   ✅ UNIX r+ mode: #{string_io.read}"
 
 # 5. TEMPFILe (cross-platform)
 puts "\n5️⃣ TEMPFILe"
-temp = Tempfile.new(['io-play', '.txt'])
+temp = Tempfile.new(["io-play", ".txt"])
 temp.write("Temp file content\n")
 temp.rewind
 puts "   Tempfile path: #{temp.path}"
@@ -119,7 +119,7 @@ puts "   Captured: #{captured.read}"
 
 # 7. POSITION OVERWRITING (cross-platform)
 puts "\n7️⃣ POSITION OVERWRITING"
-rw_file = Tempfile.new('overwrite-test')
+rw_file = Tempfile.new("overwrite-test")
 rw_file.puts "First line"
 rw_file.puts "Second line"
 rw_file.rewind
